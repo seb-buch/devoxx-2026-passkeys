@@ -1,7 +1,7 @@
 # Ma présentation
 
-Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée _LE TITRE_
-et présentée à l'endroit.
+Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée _Passkeys : Adieu les mots de passe, bonjour la sécurité sans friction !_
+et présentée au [Devoxx France 2026](https://devoxx.fr/).
 
 > [!NOTE]
 > La présentation est formatée pour être visualisée au format 16:9.
@@ -9,7 +9,7 @@ et présentée à l'endroit.
 ## Je veux voir la présentation
 
 La présentation est disponible en
-ligne [ici](https://seb-buch.github.io/).
+ligne [ici](https://seb-buch.github.io/devoxx-2026-passkeys).
 
 ## Je veux construire et servir la présentation en local.
 
