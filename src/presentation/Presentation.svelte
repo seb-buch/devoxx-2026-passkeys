@@ -2,8 +2,9 @@
 	import './assets/styles.css';
 	import '@catppuccin/highlightjs/css/catppuccin-latte.css';
 	import Title from './Title.svelte';
-	import ExampleTerminal from './ExampleTerminal.svelte';
-	import ExampleCode from './ExampleCode.svelte';
+	import ExampleTerminal from './examples/ExampleTerminal.svelte';
+	import ExampleCode from './examples/ExampleCode.svelte';
+	import Who from './introduction/Who.svelte';
 </script>
 
 <svelte:head>
@@ -11,5 +12,10 @@
 </svelte:head>
 
 <Title />
-<ExampleTerminal />
-<ExampleCode />
+<section>
+	<Who/>
+</section>
+<section>
+	<ExampleTerminal />
+	<ExampleCode />
+</section>
