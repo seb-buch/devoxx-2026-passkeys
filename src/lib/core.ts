@@ -10,7 +10,9 @@ export function checkSlideDimensions(rawEvent: Event) {
 	const slideWidth = event.currentSlide.scrollWidth;
 	let badDims = false;
 
-	console.log(`current slide dimensions: ${slideWidth}x${slideHeight} (Presentation: ${presentationWidth}x${presentationHeight})`);
+	console.log(
+		`current slide dimensions: ${slideWidth}x${slideHeight} (Presentation: ${presentationWidth}x${presentationHeight})`
+	);
 
 	if (slideHeight > presentationHeight) {
 		console.log(`Slide is too tall for the presentation (${slideHeight} vs ${presentationHeight})`);
@@ -22,7 +24,6 @@ export function checkSlideDimensions(rawEvent: Event) {
 	}
 
 	const deckElement = document.getElementsByClassName('reveal')[0] as HTMLElement;
-	if (badDims)
-		deckElement.style.background = 'red';
+	if (badDims) deckElement.style.background = 'red';
 	else deckElement.style.background = '';
 }

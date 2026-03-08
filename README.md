@@ -1,6 +1,6 @@
 # Ma présentation
 
-Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée *LE TITRE*
+Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée _LE TITRE_
 et présentée à l'endroit.
 
 > [!NOTE]

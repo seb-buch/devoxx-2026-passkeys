@@ -3,10 +3,9 @@
 
 	type Props = {
 		children: Snippet;
-	}
+	};
 
 	const { children }: Props = $props();
-
 </script>
 
 <aside class="notes" data-markdown>

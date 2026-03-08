@@ -7,8 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>My presentation title
-	</title>
+	<title>My presentation title</title>
 </svelte:head>
 
 <ExampleTitle />

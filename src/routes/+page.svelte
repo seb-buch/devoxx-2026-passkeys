@@ -9,7 +9,7 @@
 	import Presentation from '../presentation/Presentation.svelte';
 	import { checkSlideDimensions } from '$lib/core';
 
-	export let reveal: Options = {
+	const revealOptions: Options = {
 		slideNumber: false,
 		showSlideNumber: 'all',
 		controls: false,
@@ -24,14 +24,12 @@
 
 	onMount(async () => {
 		await tick();
-		const deck = new Reveal(reveal);
+		const deck = new Reveal(revealOptions);
 		deck.on('slidechanged', checkSlideDimensions);
 		deck.on('ready', checkSlideDimensions);
 		await deck.initialize();
 		console.log('Presentation is ready!');
 	});
-
-
 </script>
 
 <svelte:head>

@@ -8,10 +8,7 @@
 <Slide>
 	<h1>Example Terminal</h1>
 	<Terminal>
-		<TerminalPromptLine>ls ./
-		</TerminalPromptLine>
-		<TerminalStdout isFragment={true}>
-			package.json
-		</TerminalStdout>
+		<TerminalPromptLine>ls ./</TerminalPromptLine>
+		<TerminalStdout isFragment={true}>package.json</TerminalStdout>
 	</Terminal>
 </Slide>

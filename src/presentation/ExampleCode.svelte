@@ -2,6 +2,7 @@
 	import Slide from '$lib/Slide.svelte';
 	import Code from '$lib/Code.svelte';
 </script>
+
 <Slide>
 	<h3>Code example</h3>
 	<Code language="python" lineNumbers="|1|2-7|3,7" fontSize="0.9em">
