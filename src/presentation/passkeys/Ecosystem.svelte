@@ -20,8 +20,8 @@
 		c'est la norme chapeau, portée par la FIDO Alliance — un consortium industriel. FIDO2 se
 		décompose en deux parties. WebAuthn, c'est le standard W3C qui définit l'API JavaScript que
 		votre application web va appeler. CTAP, c'est le protocole qui gère la communication entre le
-		navigateur et l'authenticator — que ce soit le lecteur d'empreinte de votre laptop, Face ID
-		sur votre téléphone, ou une clé de sécurité USB. Aujourd'hui, on va se concentrer sur la
-		partie WebAuthn, celle qui vous concerne en tant que développeurs d'applications.
+		navigateur et l'authenticator — que ce soit le lecteur d'empreinte de votre laptop, Face ID sur
+		votre téléphone, ou une clé de sécurité USB. Aujourd'hui, on va se concentrer sur la partie
+		WebAuthn, celle qui vous concerne en tant que développeurs d'applications.
 	</SpeakerNotes>
 </Slide>

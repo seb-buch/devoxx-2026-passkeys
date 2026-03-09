@@ -38,8 +38,8 @@
 		changement de paradigme sur le plan technique. Mais les mots de passe ne sont pas à jeter. Ils
 		restent nécessaires pour le bootstrapping — la première connexion avant l'enregistrement d'une
 		passkey — et ils offrent une universalité que les passkeys n'ont pas encore. Aujourd'hui, la
-		bonne approche, c'est de proposer les passkeys comme méthode d'authentification principale,
-		tout en gardant le mot de passe comme méthode de repli. C'est exactement ce que fait
-		KrabsVault, et c'est ce que je vous encourage à faire dans vos applications.
+		bonne approche, c'est de proposer les passkeys comme méthode d'authentification principale, tout
+		en gardant le mot de passe comme méthode de repli. C'est exactement ce que fait KrabsVault, et
+		c'est ce que je vous encourage à faire dans vos applications.
 	</SpeakerNotes>
 </Slide>

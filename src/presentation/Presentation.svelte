@@ -35,8 +35,7 @@
 	import MrKrabsCodes from './implementation/MrKrabsCodes.svelte';
 	import ServerRegistration from './implementation/ServerRegistration.svelte';
 	import ClientRegistration from './implementation/ClientRegistration.svelte';
-	import ServerRegistrationVerification
-		from './implementation/ServerRegistrationVerification.svelte';
+	import ServerRegistrationVerification from './implementation/ServerRegistrationVerification.svelte';
 	import DemoRegistration from './implementation/DemoRegistration.svelte';
 	import ServerAuthentication from './implementation/ServerAuthentication.svelte';
 	import ClientAuthentication from './implementation/ClientAuthentication.svelte';

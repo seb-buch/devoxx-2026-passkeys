@@ -10,9 +10,16 @@
 		<li>Le client appelle <code>navigator.credentials.get()</code></li>
 		<li>L'authenticator vérifie l'utilisateur localement (biométrie / PIN)</li>
 		<li>L'authenticator <strong>signe</strong> le challenge avec la clé privée</li>
-		<li>Le serveur <strong>vérifie</strong> la signature avec la clé publique → authentification réussie</li>
+		<li>
+			Le serveur <strong>vérifie</strong> la signature avec la clé publique → authentification réussie
+		</li>
 	</ol>
-	<p><strong>Aucun secret ne transite sur le réseau. Seule une signature (preuve cryptographique) est envoyée.</strong></p>
+	<p>
+		<strong
+			>Aucun secret ne transite sur le réseau. Seule une signature (preuve cryptographique) est
+			envoyée.</strong
+		>
+	</p>
 	<SpeakerNotes>
 		Pour l'authentification, c'est le même principe. Le serveur envoie un nouveau challenge. Le
 		navigateur sollicite l'authenticator, Bob valide avec sa biométrie, et l'authenticator signe le

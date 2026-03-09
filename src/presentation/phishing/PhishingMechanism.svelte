@@ -21,8 +21,8 @@
 		Voici le mécanisme : Plankton envoie un email à Bob qui ressemble à un email officiel de
 		KrabsVault, avec un lien vers le faux site. Bob clique, il arrive sur une page qui ressemble en
 		tout point au vrai site, il saisit son mot de passe… et Plankton le récupère. À ce stade,
-		Plankton peut se connecter au vrai KrabsVault avec les identifiants de Bob. Le cœur du
-		problème : le mot de passe est saisi par l'utilisateur. Le navigateur, lui, n'a aucun moyen de
-		savoir que le site est faux — il transmet docilement ce que l'utilisateur tape.
+		Plankton peut se connecter au vrai KrabsVault avec les identifiants de Bob. Le cœur du problème
+		: le mot de passe est saisi par l'utilisateur. Le navigateur, lui, n'a aucun moyen de savoir que
+		le site est faux — il transmet docilement ce que l'utilisateur tape.
 	</SpeakerNotes>
 </Slide>

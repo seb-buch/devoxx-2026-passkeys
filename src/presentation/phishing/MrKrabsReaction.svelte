@@ -15,7 +15,7 @@
 		sa précieuse recette de cette façon. Comme c'est lui qui développe l'application — il ne fait
 		confiance à personne d'autre pour sécuriser sa recette — il décide d'ajouter un nouveau mode
 		d'authentification : les passkeys. Un mécanisme qui est résistant au phishing non pas parce
-		qu'on fait confiance à l'utilisateur pour vérifier l'URL, mais parce que le navigateur
-		lui-même empêche l'attaque. Voyons comment ça fonctionne.
+		qu'on fait confiance à l'utilisateur pour vérifier l'URL, mais parce que le navigateur lui-même
+		empêche l'attaque. Voyons comment ça fonctionne.
 	</SpeakerNotes>
 </Slide>

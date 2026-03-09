@@ -24,10 +24,10 @@
 		Dans le protocole WebAuthn, il y a trois acteurs. Le Relying Party, c'est votre serveur — dans
 		notre cas, KrabsVault. Le Client, c'est le navigateur web qui expose l'API
 		navigator.credentials. Et l'Authenticator, c'est le dispositif qui va générer la paire de clés
-		et stocker la clé privée — ça peut être le lecteur d'empreinte de votre Mac, Windows Hello,
-		Face ID sur un iPhone, ou encore une clé de sécurité physique comme une YubiKey. En tant que
+		et stocker la clé privée — ça peut être le lecteur d'empreinte de votre Mac, Windows Hello, Face
+		ID sur un iPhone, ou encore une clé de sécurité physique comme une YubiKey. En tant que
 		développeur, vous interagissez principalement avec le navigateur via l'API WebAuthn. La
-		communication entre le navigateur et l'authenticator est gérée par le système, vous n'avez pas
-		à vous en occuper.
+		communication entre le navigateur et l'authenticator est gérée par le système, vous n'avez pas à
+		vous en occuper.
 	</SpeakerNotes>
 </Slide>

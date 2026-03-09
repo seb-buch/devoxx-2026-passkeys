@@ -26,7 +26,7 @@ await fetch('/api/auth/login/verify', {
 		Côté client, même pattern que pour l'enregistrement. On récupère les options, on appelle
 		startAuthentication — qui déclenche navigator.credentials.get() sous le capot — l'utilisateur
 		valide avec sa biométrie, et on envoie la réponse signée au serveur. Trois étapes, quelques
-		lignes de code. SimpleWebAuthn abstrait toute la complexité de la sérialisation et du
-		formatting WebAuthn.
+		lignes de code. SimpleWebAuthn abstrait toute la complexité de la sérialisation et du formatting
+		WebAuthn.
 	</SpeakerNotes>
 </Slide>

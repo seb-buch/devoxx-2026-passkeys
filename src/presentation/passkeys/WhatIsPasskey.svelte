@@ -15,8 +15,8 @@
 		<li>👆 Validation biométrique ou PIN local — simple pour l'utilisateur</li>
 	</ul>
 	<SpeakerNotes>
-		Alors, c'est quoi une passkey ? En termes simples, c'est un moyen de se connecter qui repose
-		sur la cryptographie asymétrique au lieu d'un secret partagé. Le serveur ne stocke jamais votre
+		Alors, c'est quoi une passkey ? En termes simples, c'est un moyen de se connecter qui repose sur
+		la cryptographie asymétrique au lieu d'un secret partagé. Le serveur ne stocke jamais votre
 		secret. La passkey est liée au domaine du site, donc le navigateur refuse de l'utiliser sur un
 		faux domaine. Et pour l'utilisateur, c'est plus simple : pas de mot de passe à retenir, juste
 		une empreinte digitale, un scan facial ou un code PIN local. Mais pour comprendre comment ça

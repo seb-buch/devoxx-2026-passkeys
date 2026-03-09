@@ -6,7 +6,9 @@
 <Slide>
 	<h2>Plankton entre en scène</h2>
 	<p>Plankton veut la recette du Pâté de Crabe.</p>
-	<p><strong>Sa stratégie : se faire passer pour KrabsVault et voler le mot de passe de Bob.</strong></p>
+	<p>
+		<strong>Sa stratégie : se faire passer pour KrabsVault et voler le mot de passe de Bob.</strong>
+	</p>
 	<p>
 		krabsvau<strong>l</strong>t.com → krabsvau<strong>1</strong>t.com
 	</p>

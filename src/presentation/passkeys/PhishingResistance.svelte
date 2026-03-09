@@ -30,12 +30,12 @@
 		>
 	</p>
 	<SpeakerNotes>
-		Et voici le point clé de cette présentation. Pourquoi les passkeys empêchent-elles le
-		phishing ? Parce que lors de l'enregistrement, la passkey est liée à un domaine précis — ce
-		qu'on appelle le Relying Party ID. Quand le navigateur doit utiliser une passkey, il vérifie
-		automatiquement que le domaine du site correspond au rpId enregistré. Si Bob se retrouve sur
-		krabsvau1t.com, le navigateur ne trouvera tout simplement aucune passkey correspondante. Pas de
-		prompt biométrique, pas d'erreur cryptique — juste… rien. L'attaque échoue silencieusement. La
-		vérification est faite par le navigateur, pas par l'humain. Et c'est ça qui change tout.
+		Et voici le point clé de cette présentation. Pourquoi les passkeys empêchent-elles le phishing ?
+		Parce que lors de l'enregistrement, la passkey est liée à un domaine précis — ce qu'on appelle
+		le Relying Party ID. Quand le navigateur doit utiliser une passkey, il vérifie automatiquement
+		que le domaine du site correspond au rpId enregistré. Si Bob se retrouve sur krabsvau1t.com, le
+		navigateur ne trouvera tout simplement aucune passkey correspondante. Pas de prompt biométrique,
+		pas d'erreur cryptique — juste… rien. L'attaque échoue silencieusement. La vérification est
+		faite par le navigateur, pas par l'humain. Et c'est ça qui change tout.
 	</SpeakerNotes>
 </Slide>

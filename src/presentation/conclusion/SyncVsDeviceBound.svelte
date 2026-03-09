@@ -43,11 +43,11 @@
 	</table>
 	<SpeakerNotes>
 		Un point important à comprendre : toutes les passkeys ne se valent pas. Il existe deux grandes
-		catégories. Les passkeys synchronisées sont stockées dans le cloud de votre écosystème —
-		iCloud Keychain pour Apple, Google Password Manager pour Android/Chrome. Elles sont disponibles
-		sur tous vos appareils, ce qui est pratique mais implique de faire confiance au fournisseur
-		cloud. Les passkeys device-bound, elles, restent sur un seul appareil — comme une YubiKey.
-		C'est plus sécurisé en théorie, mais si vous perdez l'appareil, vous perdez la passkey. Pour
-		la plupart des usages grand public, ce sont les passkeys synchronisées qui sont déployées.
+		catégories. Les passkeys synchronisées sont stockées dans le cloud de votre écosystème — iCloud
+		Keychain pour Apple, Google Password Manager pour Android/Chrome. Elles sont disponibles sur
+		tous vos appareils, ce qui est pratique mais implique de faire confiance au fournisseur cloud.
+		Les passkeys device-bound, elles, restent sur un seul appareil — comme une YubiKey. C'est plus
+		sécurisé en théorie, mais si vous perdez l'appareil, vous perdez la passkey. Pour la plupart des
+		usages grand public, ce sont les passkeys synchronisées qui sont déployées.
 	</SpeakerNotes>
 </Slide>

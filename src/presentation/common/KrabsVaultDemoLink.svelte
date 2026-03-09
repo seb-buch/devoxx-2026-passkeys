@@ -3,37 +3,35 @@
 
 	type Props = {
 		link?: string;
-	}
+	};
 
-	const { link="http://localhost:5173"  }: Props = $props();
+	const { link = 'http://localhost:5173' }: Props = $props();
 </script>
 
 <div class="container">
-	<a href={link} target="_blank"><img src={logo} alt="KrabsVault logo"/>
+	<a href={link} target="_blank"
+		><img src={logo} alt="KrabsVault logo" />
 		KrabsVault en action
-		<img src={logo} alt="KrabsVault logo"/></a>
+		<img src={logo} alt="KrabsVault logo" /></a
+	>
 </div>
 
 <style>
-
 	.container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 1080px;
 
-    a {
+		a {
 			font-size: 1.5em;
 			font-family: var(--r-heading-font), sans-serif;
 			font-weight: bold;
-      img {
-        height: 2em;
-        vertical-align: middle;
-        padding: 0 0.5em;
-      }
-    }
+			img {
+				height: 2em;
+				vertical-align: middle;
+				padding: 0 0.5em;
+			}
+		}
 	}
-
-
-
-	</style>
+</style>

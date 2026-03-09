@@ -10,8 +10,14 @@
 		<li>🔓 Clé publique — partageable avec tout le monde</li>
 	</ul>
 	<ul>
-		<li>Ce qui est <strong>signé</strong> avec la clé privée peut être <strong>vérifié</strong> avec la clé publique</li>
-		<li>Ce qui est <strong>chiffré</strong> avec la clé publique ne peut être <strong>déchiffré</strong> qu'avec la clé privée</li>
+		<li>
+			Ce qui est <strong>signé</strong> avec la clé privée peut être <strong>vérifié</strong> avec la
+			clé publique
+		</li>
+		<li>
+			Ce qui est <strong>chiffré</strong> avec la clé publique ne peut être
+			<strong>déchiffré</strong> qu'avec la clé privée
+		</li>
 	</ul>
 	<p><em>Même principe que les clés GPG pour signer vos commits Git.</em></p>
 	<SpeakerNotes>
