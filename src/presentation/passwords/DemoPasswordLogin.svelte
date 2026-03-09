@@ -1,11 +1,11 @@
 <script>
 	import Slide from '$lib/Slide.svelte';
 	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import KrabsVaultDemoLink from '../common/KrabsVaultDemoLink.svelte';
 </script>
 
 <Slide>
-	<h2>🎬 DÉMO</h2>
-	<h3>Connexion par mot de passe</h3>
+	<KrabsVaultDemoLink />
 	<SpeakerNotes>
 		On bascule sur l'application. Je vais me connecter en tant que Bob avec son mot de passe.
 		(Démo live : saisie de l'identifiant et du mot de passe, connexion réussie, accès à la recette

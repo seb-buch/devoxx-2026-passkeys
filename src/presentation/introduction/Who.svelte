@@ -1,9 +1,11 @@
 <script>
 	import Slide from '$lib/Slide.svelte';
 	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Todo from '../Todo.svelte';
 </script>
 
 <Slide>
+	<Todo/>
 	<h2>Qui suis-je ?</h2>
 	<p>
 		Diapositive de présentation de l'intervenant :

@@ -4,7 +4,7 @@
 </script>
 
 <Slide>
-	<h2>Authentification par mot de passe — comment ça marche</h2>
+	<h2>Authentification par mot de passe</h2>
 	<ol>
 		<li>L'utilisateur saisit identifiant + mot de passe</li>
 		<li>Le client envoie les credentials au serveur (<code>POST /login</code>)</li>

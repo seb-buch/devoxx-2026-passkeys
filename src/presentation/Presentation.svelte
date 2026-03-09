@@ -10,8 +10,8 @@
 	import Plan from './introduction/Plan.svelte';
 
 	// Passwords
-	import Bob from './passwords/Bob.svelte';
-	import KrabsVaultLogin from './passwords/KrabsVaultLogin.svelte';
+	import Bob from './introduction/Bob.svelte';
+	import KrabsVaultIntro from './introduction/KrabsVaultIntro.svelte';
 	import DemoPasswordLogin from './passwords/DemoPasswordLogin.svelte';
 	import HowPasswordsWork from './passwords/HowPasswordsWork.svelte';
 	import PasswordProblems from './passwords/PasswordProblems.svelte';
@@ -35,7 +35,8 @@
 	import MrKrabsCodes from './implementation/MrKrabsCodes.svelte';
 	import ServerRegistration from './implementation/ServerRegistration.svelte';
 	import ClientRegistration from './implementation/ClientRegistration.svelte';
-	import ServerRegistrationVerification from './implementation/ServerRegistrationVerification.svelte';
+	import ServerRegistrationVerification
+		from './implementation/ServerRegistrationVerification.svelte';
 	import DemoRegistration from './implementation/DemoRegistration.svelte';
 	import ServerAuthentication from './implementation/ServerAuthentication.svelte';
 	import ClientAuthentication from './implementation/ClientAuthentication.svelte';
@@ -52,19 +53,16 @@
 </script>
 
 <svelte:head>
-	<title>Passkeys : Adieu les mots de passe, bonjour la sécurité sans friction !</title>
+	<title>Passkeys &ndash; Sébastien Buchoux</title>
 </svelte:head>
 
 <Title />
 
-<section>
-	<Who />
-	<Plan />
-</section>
+<Who />
 
 <section>
 	<Bob />
-	<KrabsVaultLogin />
+	<KrabsVaultIntro />
 	<DemoPasswordLogin />
 	<HowPasswordsWork />
 	<PasswordProblems />
@@ -106,4 +104,9 @@
 	<KeyTakeaways />
 	<Resources />
 	<Thanks />
+</section>
+
+<!-- Diapos non utilisées -->
+<section>
+	<Plan />
 </section>
