@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './assets/styles.css';
+	import favicon from './assets/favicon.png';
 	import '@catppuccin/highlightjs/css/catppuccin-latte.css';
 
 	// Title
@@ -35,7 +36,8 @@
 	import MrKrabsCodes from './implementation/MrKrabsCodes.svelte';
 	import ServerRegistration from './implementation/ServerRegistration.svelte';
 	import ClientRegistration from './implementation/ClientRegistration.svelte';
-	import ServerRegistrationVerification from './implementation/ServerRegistrationVerification.svelte';
+	import ServerRegistrationVerification
+		from './implementation/ServerRegistrationVerification.svelte';
 	import DemoRegistration from './implementation/DemoRegistration.svelte';
 	import ServerAuthentication from './implementation/ServerAuthentication.svelte';
 	import ClientAuthentication from './implementation/ClientAuthentication.svelte';
@@ -53,6 +55,7 @@
 
 <svelte:head>
 	<title>Passkeys &ndash; Sébastien Buchoux</title>
+	<link rel="icon" href={favicon} />
 </svelte:head>
 
 <Title />
