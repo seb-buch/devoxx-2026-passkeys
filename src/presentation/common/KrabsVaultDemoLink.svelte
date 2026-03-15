@@ -5,7 +5,7 @@
 		link?: string;
 	};
 
-	const { link = 'http://localhost:5173' }: Props = $props();
+	const { link = 'https://krabsvault.com' }: Props = $props();
 </script>
 
 <div class="container">
