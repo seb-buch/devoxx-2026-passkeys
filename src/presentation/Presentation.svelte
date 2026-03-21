@@ -18,9 +18,8 @@
 	import PasswordProblems from './passwords/PasswordProblems.svelte';
 
 	// Phishing
-	import Plankton from './phishing/Plankton.svelte';
+	import PhishingEmail from './phishing/PhishingEmail.svelte';
 	import PhishingMechanism from './phishing/PhishingMechanism.svelte';
-	import DemoPhishing from './phishing/DemoPhishing.svelte';
 	import MrKrabsReaction from './phishing/MrKrabsReaction.svelte';
 
 	// Passkeys concepts
@@ -71,9 +70,8 @@
 </section>
 
 <section>
-	<Plankton />
+	<PhishingEmail />
 	<PhishingMechanism />
-	<DemoPhishing />
 	<MrKrabsReaction />
 </section>
 
