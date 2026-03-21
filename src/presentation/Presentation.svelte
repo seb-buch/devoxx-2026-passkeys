@@ -24,7 +24,7 @@
 
 	// Passkeys concepts
 	import WhatIsPasskey from './passkeys/WhatIsPasskey.svelte';
-	import AsymmetricCrypto from './passkeys/AsymmetricCrypto.svelte';
+	import AsymmetricCrypto from './cryptography/AsymmetricCrypto.svelte';
 	import Ecosystem from './passkeys/Ecosystem.svelte';
 	import Actors from './passkeys/Actors.svelte';
 	import RegistrationFlow from './passkeys/RegistrationFlow.svelte';
@@ -50,6 +50,7 @@
 	import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
 	import Resources from './conclusion/Resources.svelte';
 	import Thanks from './conclusion/Thanks.svelte';
+	import AsymmetricEncryptionSlide from './cryptography/AsymmetricEncryptionSlide.svelte';
 </script>
 
 <svelte:head>
@@ -76,8 +77,12 @@
 </section>
 
 <section>
-	<WhatIsPasskey />
 	<AsymmetricCrypto />
+	<AsymmetricEncryptionSlide />
+</section>
+
+<section>
+	<WhatIsPasskey />
 	<Ecosystem />
 	<Actors />
 	<RegistrationFlow />

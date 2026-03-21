@@ -1,17 +1,52 @@
 <script>
 	import Slide from '$lib/Slide.svelte';
 	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import browserIcon from '../assets/images/browser.png';
+	import spongebobIcon from '../assets/images/spongebob.png';
+	import serverIcon from '../assets/images/server.png';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+	import FlowDiagram from '../common/FlowDiagram.svelte';
+
+	const streamLines = [
+		{
+			iconPath: browserIcon,
+			name: 'Navigateur'
+		},
+		{
+			iconPath: spongebobIcon,
+			name: 'Authenticator'
+		},
+		{
+			iconPath: serverIcon,
+			name: 'Serveur'
+		}
+	];
+
+	const steps = [
+		{ from: 2, to: 0, label: 'Challenge + options (rpId, userId, algorithmes)' },
+		{ location: 0, label: 'navigator.credentials.create()' },
+		{ from: 0, to: 1, label: "Demande de création d'un credential" },
+		{ location: 1, label: 'Vérification locale (biométrie / PIN)' },
+		{ location: 1, label: 'Génération paire de clés + signature challenge' },
+		{ from: 1, to: 0, label: 'Attestation + clé publique' },
+		{ from: 0, to: 2, label: 'credential + réponse signée' },
+		{ location: 2, label: 'Vérification signature + stockage clé publique' }
+	];
+
+	const flowDiagram = {
+		title: "Diagramme d'enregistrement d'une passkey",
+		streamLines: streamLines,
+		steps: steps
+	};
 </script>
 
 <Slide>
 	<h2>Enregistrement d'une passkey — le flux</h2>
-	<ol>
-		<li>Le serveur génère un <strong>challenge</strong> + options (rpId, userId, algorithmes…)</li>
-		<li>Le client appelle <code>navigator.credentials.create()</code></li>
-		<li>L'authenticator demande une vérification locale (biométrie / PIN)</li>
-		<li>L'authenticator génère une <strong>paire de clés</strong> et signe le challenge</li>
-		<li>Le serveur reçoit la <strong>clé publique</strong>, vérifie la signature, et la stocke</li>
-	</ol>
+
+	<VerticalSpacer height="2em" />
+
+	<FlowDiagram useFragment={true} {flowDiagram} diagramStyle={{ stepHeight: 44 }} />
+
 	<p>
 		<strong
 			>La clé privée ne quitte JAMAIS l'authenticator. Le serveur ne stocke que la clé publique.</strong

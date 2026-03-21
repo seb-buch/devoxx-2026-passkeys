@@ -20,22 +20,21 @@
 			iconPath: passwordStorageIcon,
 			name: 'Stockage MdP'
 		}
-	]
+	];
 
 	const steps = [
-		{from: 0, to: 1, label: "identifiant + mot de passe"},
-		{from: 1, to: 2, label: "Hash pour identifiant ?"},
-		{from: 2, to: 1, label: "Hash"},
-		{location: 1, label: "Comparaison avec Hash"},
-		{from: 1, to: 0, label: "✓ Authentification réussie"}
-	]
+		{ from: 0, to: 1, label: 'identifiant + mot de passe' },
+		{ from: 1, to: 2, label: 'Hash pour identifiant ?' },
+		{ from: 2, to: 1, label: 'Hash' },
+		{ location: 1, label: 'Comparaison avec Hash' },
+		{ from: 1, to: 0, label: '✓ Authentification réussie' }
+	];
 
 	const flowDiagram = {
 		title: "Diagramme d'authentification par mot de passe",
 		streamLines: streamLines,
 		steps: steps
-	}
-
+	};
 </script>
 
 <Slide>
@@ -43,8 +42,7 @@
 
 	<VerticalSpacer height="2em" />
 
-	<FlowDiagram useFragment={true} flowDiagram={flowDiagram} diagramStyle={ {stepHeight:50} }/>
-
+	<FlowDiagram useFragment={true} {flowDiagram} diagramStyle={{ stepHeight: 50 }} />
 
 	<SpeakerNotes>
 		Quand Bob se connecte, voici ce qui se passe : le navigateur envoie son identifiant et son mot
