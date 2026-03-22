@@ -7,42 +7,20 @@
 	import Title from './Title.svelte';
 
 	// Introduction
-	import Who from './introduction/Who.svelte';
-	import Plan from './introduction/Plan.svelte';
+	import Who from './Who.svelte';
 
 	// Passwords
-	import Bob from './introduction/Bob.svelte';
-	import KrabsVaultIntro from './introduction/KrabsVaultIntro.svelte';
-	import DemoPasswordLogin from './passwords/DemoPasswordLogin.svelte';
-	import HowPasswordsWork from './passwords/HowPasswordsWork.svelte';
+	import HowPasswordsWorkSlide from './passwords/HowPasswordsWorkSlide.svelte';
 	import PasswordProblems from './passwords/PasswordProblems.svelte';
 
 	// Phishing
 	import PhishingEmail from './phishing/PhishingEmail.svelte';
 	import PhishingMechanism from './phishing/PhishingMechanism.svelte';
-	import MrKrabsReaction from './phishing/MrKrabsReaction.svelte';
 
 	// Passkeys concepts
-	import WhatIsPasskey from './passkeys/WhatIsPasskey.svelte';
 	import AsymmetricCrypto from './cryptography/AsymmetricCrypto.svelte';
-	import Ecosystem from './passkeys/Ecosystem.svelte';
-	import Actors from './passkeys/Actors.svelte';
-	import RegistrationFlow from './passkeys/RegistrationFlow.svelte';
-	import AuthenticationFlow from './passkeys/AuthenticationFlow.svelte';
-	import PhishingResistance from './passkeys/PhishingResistance.svelte';
 
 	// Implementation
-	import MrKrabsCodes from './implementation/MrKrabsCodes.svelte';
-	import ServerRegistration from './implementation/ServerRegistration.svelte';
-	import ClientRegistration from './implementation/ClientRegistration.svelte';
-	import ServerRegistrationVerification
-		from './implementation/ServerRegistrationVerification.svelte';
-	import DemoRegistration from './implementation/DemoRegistration.svelte';
-	import ServerAuthentication from './implementation/ServerAuthentication.svelte';
-	import ClientAuthentication from './implementation/ClientAuthentication.svelte';
-	import DemoAuthentication from './implementation/DemoAuthentication.svelte';
-	import DemoPhishingFails from './implementation/DemoPhishingFails.svelte';
-
 	// Conclusion
 	import SyncVsDeviceBound from './conclusion/SyncVsDeviceBound.svelte';
 	import Limits from './conclusion/Limits.svelte';
@@ -50,12 +28,43 @@
 	import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
 	import Resources from './conclusion/Resources.svelte';
 	import Thanks from './conclusion/Thanks.svelte';
-	import AsymmetricEncryptionSlide from './cryptography/AsymmetricEncryptionSlide.svelte';
+	import AsymmetricEncryptionIllustration
+		from './cryptography/AsymmetricEncryptionIllustration.svelte';
+	import SectionTitleSlide from './common/SectionTitleSlide.svelte';
+	import PasswordIRLSlide from './passwords/PasswordIRLSlide.svelte';
+	import HowPasswordsWorkIrlSlide from './passwords/HowPasswordsWorkIRLSlide.svelte';
+	import AsymmetricSigningIllustration from './cryptography/AsymmetricSigningIllustration.svelte';
+	import WebauthnOverviewSlide from './webauthn/WebauthnOverviewSlide.svelte';
+	import Fido2Slide from './webauthn/Fido2Slide.svelte';
+	import WhatIsPasskey from './webauthn/WhatIsPasskey.svelte';
+	import RegistrationFlowSlide from './webauthn/RegistrationFlowSlide.svelte';
+	import AuthenticationFlowSlide from './webauthn/AuthenticationFlowSlide.svelte';
+	import RegistrationNaiveSlide from './webauthn/RegistrationNaiveSlide.svelte';
+	import RegistrationSimpleWebAuthnSlide from './webauthn/RegistrationSimpleWebAuthnSlide.svelte';
+	import RegistrationServerOptionsNaiveSlide
+		from './webauthn/RegistrationServerOptionsNaiveSlide.svelte';
+	import RegistrationServerOptionsSimpleWebAuthnSlide
+		from './webauthn/RegistrationServerOptionsSimpleWebAuthnSlide.svelte';
+	import RegistrationServerVerifyNaiveSlide
+		from './webauthn/RegistrationServerVerifyNaiveSlide.svelte';
+	import RegistrationServerVerifySimpleWebAuthnSlide
+		from './webauthn/RegistrationServerVerifySimpleWebAuthnSlide.svelte';
+	import AuthenticationNaiveSlide from './webauthn/AuthenticationNaiveSlide.svelte';
+	import AuthenticationSimpleWebAuthnSlide
+		from './webauthn/AuthenticationSimpleWebAuthnSlide.svelte';
+	import AuthenticationServerOptionsNaiveSlide
+		from './webauthn/AuthenticationServerOptionsNaiveSlide.svelte';
+	import AuthenticationServerOptionsSimpleWebAuthnSlide
+		from './webauthn/AuthenticationServerOptionsSimpleWebAuthnSlide.svelte';
+	import AuthenticationServerVerifyNaiveSlide
+		from './webauthn/AuthenticationServerVerifyNaiveSlide.svelte';
+	import AuthenticationServerVerifySimpleWebAuthnSlide
+		from './webauthn/AuthenticationServerVerifySimpleWebAuthnSlide.svelte';
 </script>
 
 <svelte:head>
-	<title>Passkeys &ndash; Sébastien Buchoux</title>
-	<link rel="icon" href={favicon} />
+  <title>Passkeys &ndash; Sébastien Buchoux</title>
+  <link rel="icon" href={favicon} />
 </svelte:head>
 
 <Title />
@@ -63,55 +72,62 @@
 <Who />
 
 <section>
-	<Bob />
-	<KrabsVaultIntro />
-	<DemoPasswordLogin />
-	<HowPasswordsWork />
-	<PasswordProblems />
+  <SectionTitleSlide title="Comment authentifier quelqu'un ?" />
+  <PasswordIRLSlide />
+  <HowPasswordsWorkIrlSlide />
+  <HowPasswordsWorkSlide />
+  <PasswordProblems />
 </section>
 
 <section>
-	<PhishingEmail />
-	<PhishingMechanism />
-	<MrKrabsReaction />
+  <SectionTitleSlide title="S'authentifier sans partager de secret ?" />
+  <AsymmetricCrypto />
+  <AsymmetricEncryptionIllustration />
+  <AsymmetricSigningIllustration />
 </section>
 
 <section>
-	<AsymmetricCrypto />
-	<AsymmetricEncryptionSlide />
+  <SectionTitleSlide title="S'authentifier sans partage de secret avec FIDO2" />
+  <Fido2Slide />
+  <WebauthnOverviewSlide />
+  <WhatIsPasskey />
 </section>
 
 <section>
-	<WhatIsPasskey />
-	<Ecosystem />
-	<Actors />
-	<RegistrationFlow />
-	<AuthenticationFlow />
-	<PhishingResistance />
+  <SectionTitleSlide title="Enregistrement d'une passkey" />
+
+  <RegistrationFlowSlide />
+  <RegistrationNaiveSlide />
+  <RegistrationSimpleWebAuthnSlide />
+  <RegistrationServerOptionsNaiveSlide />
+  <RegistrationServerOptionsSimpleWebAuthnSlide />
+  <RegistrationServerVerifyNaiveSlide />
+  <RegistrationServerVerifySimpleWebAuthnSlide />
 </section>
 
 <section>
-	<MrKrabsCodes />
-	<ServerRegistration />
-	<ClientRegistration />
-	<ServerRegistrationVerification />
-	<DemoRegistration />
-	<ServerAuthentication />
-	<ClientAuthentication />
-	<DemoAuthentication />
-	<DemoPhishingFails />
+  <SectionTitleSlide title="Authentication avec une passkey" />
+  <AuthenticationFlowSlide />
+  <AuthenticationNaiveSlide />
+  <AuthenticationSimpleWebAuthnSlide />
+  <AuthenticationServerOptionsNaiveSlide />
+  <AuthenticationServerOptionsSimpleWebAuthnSlide />
+  <AuthenticationServerVerifyNaiveSlide />
+  <AuthenticationServerVerifySimpleWebAuthnSlide />
 </section>
 
 <section>
-	<SyncVsDeviceBound />
-	<Limits />
-	<PasswordsNotDead />
-	<KeyTakeaways />
-	<Resources />
-	<Thanks />
+  <SectionTitleSlide title="Conclusion" />
+  <SyncVsDeviceBound />
+  <Limits />
+  <PasswordsNotDead />
+  <KeyTakeaways />
+  <Resources />
 </section>
+<Thanks />
 
-<!-- Diapos non utilisées -->
 <section>
-	<Plan />
+  <SectionTitleSlide title="Le phishing" />
+  <PhishingEmail />
+  <PhishingMechanism />
 </section>

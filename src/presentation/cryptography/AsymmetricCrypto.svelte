@@ -1,41 +1,76 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import CryptoKey from './common/CryptoKey.svelte';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+
+  const keySize = '150px';
 </script>
 
 <Slide>
-	<h2>Cryptographie asymétrique</h2>
-	<p>2 Clés:</p>
-	<svg
-		fill="#00FF00"
-		viewBox="0 0 32 32"
-		xmlns="http://www.w3.org/2000/svg"
-		style="width: 1em; height: 1em;"
-	>
-		<g id="SVGRepo_bgCarrier" stroke-width="0" fill="cyan"></g>
-		<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-		<g id="SVGRepo_iconCarrier">
-			<path
-				fill="red"
-				stroke-width="5"
-				stroke="blue"
-				d="M20.959 1.209c-5.405 0.007-9.784 4.386-9.791 9.79v0.001c0 0.247 0.023 0.488 0.041 0.73l-9.739 9.739c-0.136 0.136-0.22 0.324-0.22 0.531 0 0 0 0 0 0v0 8c0 0.414 0.336 0.75 0.75 0.75h8c0.414-0 0.75-0.336 0.75-0.75v0-3.25h3.25c0.414-0 0.75-0.336 0.75-0.75v0-3.25h3.25c0 0 0.001 0 0.002 0 0.207 0 0.394-0.084 0.53-0.219l1.774-1.774c0.217 0.014 0.433 0.034 0.654 0.034 5.399-0.011 9.771-4.391 9.771-9.791s-4.372-9.78-9.77-9.791h-0.001zM20.959 19.291c-0.309-0-0.614-0.017-0.915-0.048l0.038 0.003c-0.018-0.001-0.032 0.006-0.050 0.005-0.024-0.001-0.042 0.006-0.066 0.007-0.183 0.007-0.348 0.080-0.473 0.196l0-0-0.017 0.007-1.787 1.789h-3.689c-0.414 0-0.75 0.336-0.75 0.75v0 3.25h-3.25c-0.414 0-0.75 0.336-0.75 0.75v0 3.25h-6.5v-6.939l9.757-9.757 0.010-0.023c0.114-0.123 0.186-0.286 0.194-0.466l0-0.001c0.001-0.024 0.006-0.042 0.006-0.066-0.001-0.020 0.007-0.037 0.005-0.057-0.034-0.282-0.054-0.609-0.054-0.941 0-4.579 3.712-8.291 8.291-8.291s8.291 3.712 8.291 8.291c0 4.579-3.712 8.291-8.291 8.291h-0zM23 7.25c-0.966 0-1.75 0.784-1.75 1.75s0.784 1.75 1.75 1.75c0.966 0 1.75-0.784 1.75-1.75v0c-0.001-0.966-0.784-1.749-1.75-1.75h-0zM22.75 9c0-0.138 0.112-0.25 0.25-0.25s0.25 0.112 0.25 0.25v0c0 0.275-0.5 0.275-0.5 0z"
-			></path>
-		</g>
-	</svg>
-	<ul>
-		<li>
-			Clé <strong>privée</strong>:
-			<ul>
-				<li>Signer un message</li>
-				<li>Déchiffrer un message</li>
-			</ul>
-		</li>
-		<li>
-			Clé <strong>publique</strong>:
-			<ul>
-				<li>Verifier la signature d'un message</li>
-				<li>Chiffrer un message</li>
-			</ul>
-		</li>
-	</ul>
+  <h3>Cryptographie asymétrique</h3>
+
+  <VerticalSpacer height="1em" />
+
+  <p>Une paire de clés liées:</p>
+
+  <div class="key-description">
+    <CryptoKey type="private" size={keySize} />
+    <p class="private-key">Clé privée</p>
+    <ul>
+      <li>Signer un message</li>
+      <li>
+        Déchiffrer un message
+        <span class="key-usage-details">
+          chiffré avec la clé <span class="public-key">publique</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="key-description">
+    <CryptoKey type="public" size={keySize} />
+    <p class="public-key">Clé publique</p>
+    <ul>
+      <li>
+        Verifier la signature d'un message
+        <span class="key-usage-details">
+          signé avec la clé <span class="private-key">privée</span>
+        </span>
+      </li>
+      <li>Chiffrer un message</li>
+    </ul>
+  </div>
 </Slide>
+
+<style>
+  .key-description {
+    &:not(:first-of-type) {
+      padding-top: 1em;
+    }
+
+    & > p {
+      margin-top: -30px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    & .private-key {
+      color: #d4a800;
+    }
+    & .public-key {
+      color: #70a08d;
+    }
+
+    & ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    & .key-usage-details {
+      font-size: 0.8em;
+      font-style: italic;
+      color: #888;
+    }
+  }
+</style>
