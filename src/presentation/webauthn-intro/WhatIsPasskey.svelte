@@ -1,6 +1,6 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <Slide>
@@ -43,7 +43,7 @@
     >
   </p>
 
-  <p class="de-facto-definition">
+  <p class="de-facto-definition fragment">
     Une <em>passkey</em> est un credential <em>Webauthn</em> géré par le navigateur (et l'<em
       >authenticator</em
     >

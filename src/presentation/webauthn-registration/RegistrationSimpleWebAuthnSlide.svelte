@@ -1,14 +1,17 @@
 <script lang="ts">
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import Code from '$lib/Code.svelte';
-  import codeContent from './snippets/webauthn-create-simplewebauthn.js?raw';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Code from '$lib/Code.svelte';
+	import codeContent from './snippets/webauthn-create-simplewebauthn.js?raw';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>
-  <h3>Avec <code>@simplewebauthn/browser</code></h3>
+  <h3>Comment créer une <em>Passkey</em> avec <code>@simplewebauthn/browser</code></h3>
 
-  <Code language="javascript" fontSize="0.65em" lineNumbers="1,10|3,4|3-10|6-17">
+  <VerticalSpacer height="4em" />
+
+  <Code language="javascript" fontSize="0.65em" lineNumbers="1|3,4|3-10|6-17">
     {codeContent}
   </Code>
 

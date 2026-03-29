@@ -1,12 +1,15 @@
 <script lang="ts">
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import Code from '$lib/Code.svelte';
-  import codeContent from './snippets/webauthn-create-naive.js?raw';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Code from '$lib/Code.svelte';
+	import codeContent from './snippets/webauthn-create-naive.js?raw';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>
-  <h3>Avec API WebAuthn&nbsp;: <code>navigator.credentials.create()</code></h3>
+  <h3>Comment créer une <em>Passkey</em> avec l'API native</h3>
+
+  <VerticalSpacer height="1em" />
 
   <Code language="javascript" fontSize="0.65em" lineNumbers="8-10|1,2|1,2,4-6|4-10|8-16|11-23">
     {codeContent}
