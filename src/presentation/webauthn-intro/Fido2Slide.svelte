@@ -5,7 +5,7 @@
 </script>
 
 <Slide>
-  <h3>C'est quoi FIDO2&nbsp;?</h3>
+  <h3>FIDO2, Webauthn et CTAP</h3>
   <Todo />
   <figure>
     <img

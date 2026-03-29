@@ -10,7 +10,7 @@
   <h3>Sans librairie&nbsp;: générer les options côté serveur</h3>
   <Todo message="Changer code" />
 
-  <Code language="typescript" fontSize="0.65em" lineNumbers="8,9|11|14-37">
+  <Code language="typescript" fontSize="0.65em" lineNumbers={true}>
     {codeContent}
   </Code>
 

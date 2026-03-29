@@ -33,7 +33,7 @@ La présentation est un site **SvelteKit** qui render **reveal.js**. Chaque slid
 ### Fichiers clés
 
 | Fichier                                      | Rôle                                                           |
-|----------------------------------------------|----------------------------------------------------------------|
+| -------------------------------------------- | -------------------------------------------------------------- |
 | `src/presentation/Presentation.svelte`       | Orchestre tous les slides (import + ordre)                     |
 | `src/lib/Slide.svelte`                       | Wrapper de chaque slide (`<section>` reveal.js)                |
 | `src/lib/Code.svelte`                        | Bloc de code avec syntax highlighting                          |
@@ -125,7 +125,7 @@ Chaque slide commence et finit par `<Slide>`. Props optionnelles :
 ### Palette de couleurs
 
 | Variable / Classe | Valeur    | Usage                         |
-|-------------------|-----------|-------------------------------|
+| ----------------- | --------- | ----------------------------- |
 | `--ocean-deep`    | `#003459` | Titres H2, éléments primaires |
 | `--sponge-yellow` | `#D4A800` | Accents, highlights           |
 | `--sea-green`     | `#007A6A` | Succès, sécurité              |
@@ -275,7 +275,7 @@ KrabsVault est l'application SvelteKit de démo qui tourne en parallèle de la p
 ### Routes de l'app
 
 | Route             | Description                                                         |
-|-------------------|---------------------------------------------------------------------|
+| ----------------- | ------------------------------------------------------------------- |
 | `/`               | Dashboard KrabsVault (accès à la recette)                           |
 | `/login`          | Login password ET passkey                                           |
 | `/communications` | Visualisation temps réel des événements d'auth (très utile en démo) |

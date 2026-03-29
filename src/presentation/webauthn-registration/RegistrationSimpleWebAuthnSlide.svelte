@@ -8,7 +8,7 @@
 <Slide>
   <h3>Avec <code>@simplewebauthn/browser</code></h3>
 
-  <Code language="javascript" fontSize="0.6em" lineNumbers="1,10|3,4|3-10|6-17">
+  <Code language="javascript" fontSize="0.65em" lineNumbers="1,10|3,4|3-10|6-17">
     {codeContent}
   </Code>
 

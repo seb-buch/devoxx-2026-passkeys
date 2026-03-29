@@ -10,7 +10,7 @@
   <h3>Avec <code>@simplewebauthn/server</code>&nbsp;: générer les options</h3>
   <Todo message="Changer code" />
 
-  <Code language="typescript" fontSize="0.65em" lineNumbers="1,2|6-21|23,25">
+  <Code language="typescript" fontSize="0.65em" lineNumbers={true}>
     {codeContent}
   </Code>
 

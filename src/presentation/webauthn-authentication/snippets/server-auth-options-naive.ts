@@ -24,8 +24,8 @@ return json({
     allowCredentials: passkeys.map((p) => ({
       type: 'public-key',
       id: p.id,
-      transports: p.transports,
+      transports: p.transports
     })),
-    timeout: 60000,
-  },
+    timeout: 60000
+  }
 });

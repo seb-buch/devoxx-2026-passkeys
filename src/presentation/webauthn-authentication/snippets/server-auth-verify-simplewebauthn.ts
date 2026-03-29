@@ -16,9 +16,9 @@ const verification = await verifyAuthenticationResponse({
     id: passkey.id,
     publicKey: passkey.publicKey,
     counter: passkey.counter,
-    transports: passkey.transports,
+    transports: passkey.transports
   },
-  requireUserVerification: false,
+  requireUserVerification: false
 });
 
 if (!verification.verified) {

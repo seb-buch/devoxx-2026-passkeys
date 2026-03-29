@@ -12,8 +12,8 @@ const options = await generateAuthenticationOptions({
   userVerification: 'preferred',
   allowCredentials: passkeys.map((p) => ({
     id: p.id,
-    transports: p.transports,
-  })),
+    transports: p.transports
+  }))
 });
 
 session.pendingChallenge = options.challenge;

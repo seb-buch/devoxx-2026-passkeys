@@ -3,19 +3,21 @@
   import SpeakerNotes from '$lib/SpeakerNotes.svelte';
   import Code from '$lib/Code.svelte';
   import codeContent from './snippets/server-auth-verify-naive.ts?raw';
+  import Todo from '../Todo.svelte';
 </script>
 
 <Slide>
   <h3>Sans librairie&nbsp;: vérifier l'authentification</h3>
+  <Todo message="Changer le code" />
 
-  <Code language="typescript" fontSize="0.42em" lineNumbers="8-16|18-31|33-40|42-52|54-58">
+  <Code language="typescript" fontSize="0.42em" lineNumbers={true}>
     {codeContent}
   </Code>
 
   <SpeakerNotes>
     <p>
-      Ici, pas de CBOR à décoder — l'<code>authenticatorData</code> arrive directement en binaire.
-      Le parsing reste le même principe qu'à l'enregistrement : rpIdHash, flags, signCount.
+      Ici, pas de CBOR à décoder — l'<code>authenticatorData</code> arrive directement en binaire. Le
+      parsing reste le même principe qu'à l'enregistrement : rpIdHash, flags, signCount.
     </p>
     <p>
       Mais la nouveauté c'est la <strong>vérification cryptographique</strong>. Les données signées

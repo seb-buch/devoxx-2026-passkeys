@@ -10,7 +10,7 @@
   <h3>Sans librairie&nbsp;: vérifier l'enregistrement côté serveur</h3>
   <Todo message="Changer code" />
 
-  <Code language="typescript" fontSize="0.42em" lineNumbers="7-13|15-18|20-43|45-54|56-62|64-70">
+  <Code language="typescript" fontSize="0.42em" lineNumbers={true}>
     {codeContent}
   </Code>
 

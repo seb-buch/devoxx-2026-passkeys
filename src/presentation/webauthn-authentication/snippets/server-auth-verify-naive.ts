@@ -46,8 +46,12 @@ const spkiKey = buildEcP256SpkiKey(x, y); // ~30 lignes d'assemblage ASN.1 DER..
 
 const verifier = createVerify('SHA256');
 verifier.update(signedData);
-if (!verifier.verify({ key: spkiKey, format: 'der', type: 'spki' },
-    Buffer.from(response.signature, 'base64url'))) {
+if (
+  !verifier.verify(
+    { key: spkiKey, format: 'der', type: 'spki' },
+    Buffer.from(response.signature, 'base64url')
+  )
+) {
   throw new Error('Signature invalide');
 }
 

@@ -10,7 +10,7 @@
   <h3>Avec <code>@simplewebauthn/server</code>&nbsp;: vérifier l'enregistrement</h3>
   <Todo message="Changer code" />
 
-  <Code language="typescript" fontSize="0.6em" lineNumbers="1,2|6-13|15-18|20-28|30">
+  <Code language="typescript" fontSize="0.6em" lineNumbers={true}>
     {codeContent}
   </Code>
 

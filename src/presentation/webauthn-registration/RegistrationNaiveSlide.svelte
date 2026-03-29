@@ -8,7 +8,7 @@
 <Slide>
   <h3>Avec API WebAuthn&nbsp;: <code>navigator.credentials.create()</code></h3>
 
-  <Code language="javascript" fontSize="0.55em" lineNumbers="9-11|1,2|1,2,4-7|4-11|9-18|13-25">
+  <Code language="javascript" fontSize="0.65em" lineNumbers="8-10|1,2|1,2,4-6|4-10|8-16|11-23">
     {codeContent}
   </Code>
 
