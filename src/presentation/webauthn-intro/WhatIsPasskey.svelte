@@ -1,6 +1,6 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <Slide>

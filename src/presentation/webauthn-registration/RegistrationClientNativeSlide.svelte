@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-	import Code from '$lib/Code.svelte';
-	import codeContent from './snippets/webauthn-create-naive.js?raw';
-	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import Code from '$lib/Code.svelte';
+  import codeContent from './snippets/webauthn-create-naive.js?raw';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>

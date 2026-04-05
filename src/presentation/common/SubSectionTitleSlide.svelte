@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Slide from '$lib/Slide.svelte';
+  import Slide from '$lib/Slide.svelte';
 
-	type Props = {
+  type Props = {
     title: string;
   };
 

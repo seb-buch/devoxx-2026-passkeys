@@ -1,6 +1,9 @@
 // POST /api/passkey/register-options
 import { randomBytes } from 'node:crypto';
 
+// Récupérer l'utilisateur authentifié
+const user = session.user;
+
 // Récupérer les passkeys existantes pour les exclure
 const existingPasskeys = db.getPasskeysByUserId(user.id);
 
@@ -13,7 +16,7 @@ session.pendingChallenge = challenge;
 // Construire les options manuellement selon la spec WebAuthn
 return json({
   challenge,
-  rp: { id: 'krabsvault.com', name: 'KrabsVault' },
+  rp: { id: 'example.com', name: 'MyApp' },
   user: {
     id: Buffer.from([user.id]).toString('base64url'),
     name: user.username,

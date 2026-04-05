@@ -1,67 +1,55 @@
 <script lang="ts">
-	import './assets/styles.css';
-	import favicon from './assets/favicon.png';
-	import '@catppuccin/highlightjs/css/catppuccin-latte.css';
+  import './assets/styles.css';
+  import favicon from './assets/favicon.png';
+  import '@catppuccin/highlightjs/css/catppuccin-latte.css';
 
-	// Title
-	import Title from './Title.svelte';
+  // Title
+  import Title from './Title.svelte';
 
-	// Introduction
-	import Who from './Who.svelte';
+  // Introduction
+  import Who from './Who.svelte';
 
-	// Passwords
-	import HowPasswordsWorkSlide from './passwords/HowPasswordsWorkSlide.svelte';
-	import PasswordProblems from './passwords/PasswordProblems.svelte';
+  // Passwords
+  import HowPasswordsWorkSlide from './passwords/HowPasswordsWorkSlide.svelte';
+  import PasswordProblems from './passwords/PasswordProblems.svelte';
 
-	// Phishing
-	import PhishingEmail from './phishing/PhishingEmail.svelte';
-	import PhishingMechanism from './phishing/PhishingMechanism.svelte';
+  // Phishing
+  import PhishingEmail from './phishing/PhishingEmail.svelte';
+  import PhishingMechanism from './phishing/PhishingMechanism.svelte';
 
-	// Passkeys concepts
-	import AsymmetricCrypto from './cryptography/AsymmetricCrypto.svelte';
+  // Passkeys concepts
+  import AsymmetricCryptoSlide from './cryptography/AsymmetricCryptoSlide.svelte';
 
-	// Implementation
-	// Conclusion
-	import SyncVsDeviceBound from './conclusion/SyncVsDeviceBound.svelte';
-	import Limits from './conclusion/Limits.svelte';
-	import PasswordsNotDead from './conclusion/PasswordsNotDead.svelte';
-	import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
-	import Resources from './conclusion/Resources.svelte';
-	import Thanks from './conclusion/Thanks.svelte';
-	import AsymmetricEncryptionIllustration
-		from './cryptography/AsymmetricEncryptionIllustration.svelte';
-	import SectionTitleSlide from './common/SectionTitleSlide.svelte';
-	import PasswordIRLSlide from './passwords/PasswordIRLSlide.svelte';
-	import HowPasswordsWorkIrlSlide from './passwords/HowPasswordsWorkIRLSlide.svelte';
-	import AsymmetricSigningIllustration from './cryptography/AsymmetricSigningIllustration.svelte';
-	import Fido2Slide from './webauthn-intro/Fido2Slide.svelte';
-	import WhatIsPasskey from './webauthn-intro/WhatIsPasskey.svelte';
-	import RegistrationFlowSlide from './webauthn-registration/RegistrationFlowSlide.svelte';
-	import RegistrationClientNativeSlide
-		from './webauthn-registration/RegistrationClientNativeSlide.svelte';
-	import RegistrationSimpleWebAuthnSlide
-		from './webauthn-registration/RegistrationSimpleWebAuthnSlide.svelte';
-	import RegistrationServerOptionsNaiveSlide
-		from './webauthn-registration/RegistrationServerOptionsNaiveSlide.svelte';
-	import RegistrationServerOptionsSimpleWebAuthnSlide
-		from './webauthn-registration/RegistrationServerOptionsSimpleWebAuthnSlide.svelte';
-	import RegistrationServerVerifyNaiveSlide
-		from './webauthn-registration/RegistrationServerVerifyNaiveSlide.svelte';
-	import RegistrationServerVerifySimpleWebAuthnSlide
-		from './webauthn-registration/RegistrationServerVerifySimpleWebAuthnSlide.svelte';
-	import AuthenticationFlowSlide from './webauthn-authentication/AuthenticationFlowSlide.svelte';
-	import AuthenticationNaiveSlide from './webauthn-authentication/AuthenticationNaiveSlide.svelte';
-	import AuthenticationSimpleWebAuthnSlide
-		from './webauthn-authentication/AuthenticationSimpleWebAuthnSlide.svelte';
-	import AuthenticationServerOptionsNaiveSlide
-		from './webauthn-authentication/AuthenticationServerOptionsNaiveSlide.svelte';
-	import AuthenticationServerOptionsSimpleWebAuthnSlide
-		from './webauthn-authentication/AuthenticationServerOptionsSimpleWebAuthnSlide.svelte';
-	import AuthenticationServerVerifyNaiveSlide
-		from './webauthn-authentication/AuthenticationServerVerifyNaiveSlide.svelte';
-	import AuthenticationServerVerifySimpleWebAuthnSlide
-		from './webauthn-authentication/AuthenticationServerVerifySimpleWebAuthnSlide.svelte';
-	import SubSectionTitleSlide from './common/SubSectionTitleSlide.svelte';
+  // Implementation
+  // Conclusion
+  import SyncVsDeviceBound from './conclusion/SyncVsDeviceBound.svelte';
+  import Limits from './conclusion/Limits.svelte';
+  import PasswordsNotDead from './conclusion/PasswordsNotDead.svelte';
+  import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
+  import Resources from './conclusion/Resources.svelte';
+  import Thanks from './conclusion/Thanks.svelte';
+  import AsymmetricEncryptionIllustration from './cryptography/AsymmetricEncryptionIllustration.svelte';
+  import SectionTitleSlide from './common/SectionTitleSlide.svelte';
+  import PasswordIRLSlide from './passwords/PasswordIRLSlide.svelte';
+  import HowPasswordsWorkIrlSlide from './passwords/HowPasswordsWorkIRLSlide.svelte';
+  import AsymmetricSigningIllustration from './cryptography/AsymmetricSigningIllustration.svelte';
+  import Fido2Slide from './webauthn-intro/Fido2Slide.svelte';
+  import WhatIsPasskey from './webauthn-intro/WhatIsPasskey.svelte';
+  import RegistrationFlowSlide from './webauthn-registration/RegistrationFlowSlide.svelte';
+  import RegistrationClientNativeSlide from './webauthn-registration/RegistrationClientNativeSlide.svelte';
+  import RegistrationSimpleWebAuthnSlide from './webauthn-registration/RegistrationSimpleWebAuthnSlide.svelte';
+  import RegistrationServerOptionsNaiveSlide from './webauthn-registration/RegistrationServerOptionsNaiveSlide.svelte';
+  import RegistrationServerOptionsSimpleWebAuthnSlide from './webauthn-registration/RegistrationServerOptionsSimpleWebAuthnSlide.svelte';
+  import RegistrationServerVerifyNaiveSlide from './webauthn-registration/RegistrationServerVerifyNaiveSlide.svelte';
+  import RegistrationServerVerifySimpleWebAuthnSlide from './webauthn-registration/RegistrationServerVerifySimpleWebAuthnSlide.svelte';
+  import AuthenticationFlowSlide from './webauthn-authentication/AuthenticationFlowSlide.svelte';
+  import AuthenticationNaiveSlide from './webauthn-authentication/AuthenticationNaiveSlide.svelte';
+  import AuthenticationSimpleWebAuthnSlide from './webauthn-authentication/AuthenticationSimpleWebAuthnSlide.svelte';
+  import AuthenticationServerOptionsNaiveSlide from './webauthn-authentication/AuthenticationServerOptionsNaiveSlide.svelte';
+  import AuthenticationServerOptionsSimpleWebAuthnSlide from './webauthn-authentication/AuthenticationServerOptionsSimpleWebAuthnSlide.svelte';
+  import AuthenticationServerVerifyNaiveSlide from './webauthn-authentication/AuthenticationServerVerifyNaiveSlide.svelte';
+  import AuthenticationServerVerifySimpleWebAuthnSlide from './webauthn-authentication/AuthenticationServerVerifySimpleWebAuthnSlide.svelte';
+  import SubSectionTitleSlide from './common/SubSectionTitleSlide.svelte';
 </script>
 
 <svelte:head>
@@ -83,7 +71,7 @@
 
 <section>
   <SectionTitleSlide title="S'authentifier sans partager de secret ?" />
-  <AsymmetricCrypto />
+  <AsymmetricCryptoSlide />
   <AsymmetricEncryptionIllustration />
   <AsymmetricSigningIllustration />
 </section>
@@ -99,13 +87,13 @@
 
   <RegistrationFlowSlide />
 
-  <SubSectionTitleSlide title="Côté serveur"/>
+  <SubSectionTitleSlide title="Côté serveur" />
   <RegistrationServerOptionsNaiveSlide />
   <RegistrationServerOptionsSimpleWebAuthnSlide />
   <RegistrationServerVerifyNaiveSlide />
   <RegistrationServerVerifySimpleWebAuthnSlide />
 
-  <SubSectionTitleSlide title="Côté client"/>
+  <SubSectionTitleSlide title="Côté client" />
   <RegistrationClientNativeSlide />
   <RegistrationSimpleWebAuthnSlide />
 </section>
@@ -115,13 +103,13 @@
 
   <AuthenticationFlowSlide />
 
-  <SubSectionTitleSlide title="Côté serveur"/>
+  <SubSectionTitleSlide title="Côté serveur" />
   <AuthenticationServerOptionsNaiveSlide />
   <AuthenticationServerOptionsSimpleWebAuthnSlide />
   <AuthenticationServerVerifyNaiveSlide />
   <AuthenticationServerVerifySimpleWebAuthnSlide />
 
-  <SubSectionTitleSlide title="Côté client"/>
+  <SubSectionTitleSlide title="Côté client" />
   <AuthenticationNaiveSlide />
   <AuthenticationSimpleWebAuthnSlide />
 </section>
