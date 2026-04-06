@@ -3,10 +3,15 @@
     size?: string;
     faceColor?: string;
     shirtColor?: string;
-		name?: string;
+    name?: string;
   };
 
-  const { size = '192', faceColor = '#f2d0b4', shirtColor = '#5b99d2' , name ='Alice'}: Props = $props();
+  const {
+    size = '192',
+    faceColor = '#f2d0b4',
+    shirtColor = '#5b99d2',
+    name = 'Alice'
+  }: Props = $props();
 </script>
 
 <svg width={size} height={size} viewBox="0 0 50.8 50.8" xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +49,5 @@
     line-height: 1;
     border: #0d1b2a solid 3px;
     border-radius: 8px;
-
   }
 </style>

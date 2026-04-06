@@ -27,6 +27,5 @@
       stroke-dasharray: none;
       stroke-opacity: 1;
     }
-
   }
 </style>
