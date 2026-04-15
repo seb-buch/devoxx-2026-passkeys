@@ -1,6 +1,6 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import blanquette from '../assets/images/Blanquette.png';
+  import Slide from '$lib/Slide.svelte';
+  import blanquette from '../assets/images/Blanquette.png';
 </script>
 
 <Slide>
@@ -8,11 +8,8 @@
 
   <figure>
     <img src={blanquette} alt="OSS 117 - Comment est votre blanquette?" />
-    <figcaption>
-      Comment est votre blanquette&nbsp;?
-    </figcaption>
+    <figcaption>Comment est votre blanquette&nbsp;?</figcaption>
   </figure>
-
 </Slide>
 
 <style>
@@ -29,4 +26,4 @@
       font-weight: bold;
     }
   }
-  </style>
+</style>

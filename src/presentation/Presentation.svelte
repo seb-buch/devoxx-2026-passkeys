@@ -1,5 +1,6 @@
 <script lang="ts">
   import './assets/styles.css';
+  import './assets/additional.css';
   import favicon from './assets/favicon.png';
   import '@catppuccin/highlightjs/css/catppuccin-latte.css';
 

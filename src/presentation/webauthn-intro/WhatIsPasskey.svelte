@@ -91,10 +91,10 @@
   .w3c-definition {
     font-size: 0.7em;
     font-style: italic;
-    background: #e5e7eb;
+    background: rgba(0, 0, 0, 0.15);
     padding: 1em;
     border-radius: 1em;
-    box-shadow: 0 0 0.5em #00000020;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
     margin: 4em auto 1em;
   }
 

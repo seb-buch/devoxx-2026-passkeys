@@ -46,6 +46,7 @@
     padding: 2px 4px;
     font-size: 20px;
     background: #d0e8f4;
+    color: #0d1b2a;
     line-height: 1;
     border: #0d1b2a solid 3px;
     border-radius: 8px;

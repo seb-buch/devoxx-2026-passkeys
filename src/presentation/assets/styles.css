@@ -1,93 +1,142 @@
 /**
- * Bikini Bottom Theme for reveal.js — édition fond clair
+ * Devoxx France 2026 Theme for reveal.js
  *
- * Thème inspiré de Bob l'Éponge pour la présentation
- * "Passkeys : Adieu les mots de passe, bonjour la sécurité sans friction !"
- * Devoxx France 2026
+ * Based on the official Devoxx France 2026 PowerPoint template:
+ *   github.com/quantixx/template-presentation
  *
- * Palette de couleurs (fond clair, optimisée pour la projection en amphi) :
- *   Fond principal      : #F0F8FF (Alice Blue, blanc légèrement teinté océan)
- *   Bleu océan foncé    : #003459  → titres / texte fort
- *   Bleu océan moyen    : #00527A  → accents, bordures
- *   Jaune Bob l'Éponge  : #D4A800  → highlights (assombri pour contraste sur fond clair)
- *   Sable               : #C8A96A  → décorations
- *   Rouge Plancton      : #C0392B  → danger / phishing
- *   Vert aqua foncé     : #007A6A  → succès / sécurité
+ * Adapted for "Passkeys : Adieu les mots de passe, bonjour la sécurité sans friction !"
+ * Speaker: Sébastien Buchoux — Devoxx France 2026
+ *
+ * Design system (from PowerPoint slide layouts):
+ *   Background       : #304936 (dark green)
+ *   Content area     : #609689 (teal/sage green — main visible background)
+ *   Label overlay    : #9BC1B8 at 85% opacity
+ *   Bottom bar       : #EA7E14 (Devoxx orange)
+ *   Headings         : #E7B127 (golden yellow, Pirulen font)
+ *   Body text        : white on teal
+ *   Logo orange-gold : #F1A41C
+ *
+ * Fonts:
+ *   Headings : Pirulen (Devoxx official title font)
+ *   Body     : Open Sans (Devoxx official content font)
+ *   Code     : Fira Code
  */
 
 /* =====================================================
    POLICES
    ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Nunito:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap');
+@font-face {
+  font-family: 'Pirulen';
+  src: url('/devoxx/fonts/pirulen-rg.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Conthrax';
+  src: url('/devoxx/fonts/Conthrax-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap');
 
 /* =====================================================
    VARIABLES CSS
    ===================================================== */
 
 :root {
-  --r-background-color: #f0f8ff;
-  --r-main-color: #002040;
-  --r-main-font: 'Nunito';
+  /* --- Devoxx 2026 brand colors --- */
+  --dvx-yellow: #e7b127;
+  --dvx-orange: #ea7e14;
+  --dvx-logo-orange: #f1a41c;
+  --dvx-green: #609689;
+  --dvx-dark-green: #304936;
+  --dvx-alt-green: #9bc1b8;
+
+  /* --- Backgrounds --- */
+  --dvx-bg-main: #609689;
+  --dvx-bg-dark: #304936;
+  --dvx-bg-card: rgba(0, 0, 0, 0.12);
+  --dvx-bg-elevated: rgba(0, 0, 0, 0.2);
+
+  /* --- Text --- */
+  --dvx-text: #ffffff;
+  --dvx-text-muted: rgba(255, 255, 255, 0.7);
+
+  /* --- SpongeBob narrative (semantic colors) --- */
+  --ocean-deep: #003459;
+  --sponge-yellow: #e7b127;
+  --sea-green: #9bc1b8;
+  --danger-red: #e74c3c;
+  --sand-brown: #c8a96a;
+
+  /* --- reveal.js core variables --- */
+  --r-background-color: var(--dvx-bg-main);
+  --r-main-color: var(--dvx-text);
+  --r-main-font: 'Open Sans', sans-serif;
   --r-main-font-size: 38px;
 
-  --r-heading-font: 'Paytone One';
-  --r-heading-color: #003459;
-  --r-heading-line-height: 1.1;
+  --r-heading-font: 'Pirulen', 'Conthrax', sans-serif;
+  --r-heading-color: var(--dvx-yellow);
+  --r-heading-line-height: 1.15;
   --r-heading-letter-spacing: 0.04em;
-  --r-heading-text-transform: none;
-  --r-heading-text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
+  --r-heading-text-transform: uppercase;
+  --r-heading-text-shadow: none;
   --r-heading-font-weight: 400;
   --r-heading-margin: 0 0 20px 0;
 
-  --r-heading1-size: 2.4em;
-  --r-heading2-size: 1.8em;
-  --r-heading3-size: 1.3em;
+  --r-heading1-size: 2.2em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.2em;
   --r-heading4-size: 1em;
-  --r-heading1-text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 
-  --r-link-color: #005f8a;
-  --r-link-color-dark: #003459;
-  --r-link-color-hover: #007eb5;
+  --r-link-color: #ffe08a;
+  --r-link-color-dark: var(--dvx-yellow);
+  --r-link-color-hover: #fff4cc;
 
-  --r-selection-background-color: #d4a800;
+  --r-selection-background-color: var(--dvx-orange);
   --r-selection-color: #fff;
 
   --r-block-margin: 20px;
-  --r-code-font: 'Fira Code', 'Courier New', monospace;
+  --r-code-font: 'Fira Code', monospace;
 }
 
 /* =====================================================
-   FOND : CIEL MARIN CLAIR
+   FOND PRINCIPAL — TEAL DEVOXX
    ===================================================== */
 
 .reveal-viewport {
-  background: linear-gradient(180deg, #e8f4ff 0%, #f0f8ff 40%, #eef6fa 100%);
-  background-color: #f0f8ff;
+  background: var(--dvx-bg-main);
+  background-color: var(--dvx-bg-main);
 }
 
-/* Bandeau bleu océan en haut */
-.reveal-viewport::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #003459, #00527a, #0077a8, #00527a, #003459);
-  z-index: 1;
-}
-
-/* Liseré de sable en bas */
+/* Orange accent bar at the bottom (Devoxx signature) */
 .reveal-viewport::after {
   content: '';
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #c8a96a, #e8d5a0, #d4b97a, #e8d5a0, #c8a96a);
-  z-index: 1;
+  height: 8px;
+  background: var(--dvx-orange);
+  z-index: 100;
+}
+
+/* Devoxx France 2026 stamp — top-right branding */
+.reveal-viewport::before {
+  content: 'DEVOXX FRANCE 2026';
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-family: 'Pirulen', sans-serif;
+  font-size: 0.5em;
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 6px 16px;
+  z-index: 100;
+  letter-spacing: 0.08em;
 }
 
 /* =====================================================
@@ -130,30 +179,31 @@
 
 .reveal h1 {
   font-size: var(--r-heading1-size);
-  text-shadow: var(--r-heading1-text-shadow);
-  color: #003459;
+  color: var(--dvx-yellow);
 }
 
 .reveal h2 {
   font-size: var(--r-heading2-size);
-  color: #003459;
-}
-.reveal h3 {
-  font-size: var(--r-heading3-size);
-  color: #00527a;
-}
-.reveal h4 {
-  font-size: var(--r-heading4-size);
-  color: #00527a;
+  color: var(--dvx-yellow);
 }
 
-/* Filet décoratif sous les h2 */
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+  color: var(--dvx-yellow);
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+  color: var(--dvx-alt-green);
+}
+
+/* Decorative line under h2 — orange accent */
 .reveal h2::after {
   content: '';
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #d4a800, transparent);
+  background: linear-gradient(90deg, var(--dvx-orange), transparent);
   margin: 8px auto 0;
   border-radius: 2px;
 }
@@ -169,12 +219,13 @@
 
 .reveal strong,
 .reveal b {
-  color: #003459;
+  color: #fff;
   font-weight: 700;
 }
+
 .reveal em,
 .reveal i {
-  color: #005f8a;
+  color: var(--dvx-yellow);
   font-style: italic;
 }
 
@@ -182,6 +233,7 @@
   font-size: 0.6em;
   vertical-align: top;
 }
+
 .reveal sub {
   font-size: 0.6em;
 }
@@ -191,7 +243,7 @@
   font-size: 0.6em;
   line-height: 1.2em;
   vertical-align: top;
-  color: rgba(0, 32, 64, 0.65);
+  color: var(--dvx-text-muted);
 }
 
 /* =====================================================
@@ -229,41 +281,40 @@
 }
 
 .reveal ul {
-  list-style: none;
+  list-style: disc;
   padding-left: 1.2em;
 }
 
-.reveal ul li::before {
-  content: '🫧';
-  display: inline-block;
-  margin-right: 0.4em;
-  font-size: 0.8em;
+.reveal ul li::marker {
+  color: var(--dvx-orange);
 }
 
-.reveal ul ul li::before {
-  content: '•';
-  color: #d4a800;
-  font-size: 1em;
+.reveal ul ul {
+  list-style: circle;
+}
+
+.reveal ul ul li::marker {
+  color: var(--dvx-alt-green);
 }
 
 .reveal ol {
   list-style: none;
-  counter-reset: bikini-counter;
+  counter-reset: dvx-counter;
   padding-left: 1.2em;
 }
 
 .reveal ol li {
-  counter-increment: bikini-counter;
+  counter-increment: dvx-counter;
 }
 
 .reveal ol li::before {
-  content: counter(bikini-counter);
+  content: counter(dvx-counter);
   display: inline-block;
   width: 1.4em;
   height: 1.4em;
   margin-right: 0.5em;
-  background: #003459;
-  color: #f6c90e;
+  background: var(--dvx-orange);
+  color: #fff;
   border-radius: 50%;
   text-align: center;
   line-height: 1.4em;
@@ -277,68 +328,30 @@
    CODE
    ===================================================== */
 
-.reveal code {
+.reveal :not(pre) > code {
   font-family: var(--r-code-font);
-  background: #e0eef7;
-  border: 1px solid #b0cce0;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
   padding: 0.05em 0.3em;
-  color: #003459;
+  color: #ffe08a;
   font-size: 0.9em;
 }
 
-.reveal pre {
-  display: block;
-  position: relative;
-  width: 90%;
-  margin: var(--r-block-margin) auto;
-  text-align: left;
-  font-size: 0.58em;
-  font-family: var(--r-code-font);
-  line-height: 1.5em;
-  word-wrap: break-word;
-  box-shadow: 0 4px 16px rgba(0, 52, 89, 0.15);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #b0cce0;
+/* Code listings are styled exclusively by catppuccin-mocha.css.
+   Only layout helpers that don't affect colors/fonts are kept here. */
+
+.reveal pre code .hljs-ln {
+  width: 100%;
 }
 
-.reveal pre code {
-  display: block;
-  padding: 0;
-  overflow: auto;
-  max-height: 400px;
-  background: inherit;
-  color: #002040;
-  border: none;
-  border-radius: 0;
-  font-size: 1em;
-
-  .hljs-ln {
-    width: 100%;
-  }
-  .hljs-ln-numbers {
-    padding-left: 1em;
-  }
-
-  .hljs-ln-code {
-    padding-right: 1em;
-  }
+.reveal pre code .hljs-ln-numbers {
+  padding-left: 1em;
 }
 
-/*.reveal pre::before {*/
-/*	content: attr(data-lang);*/
-/*	position: absolute;*/
-/*	top: 0;*/
-/*	right: 0;*/
-/*	padding: 2px 10px;*/
-/*	background: #003459;*/
-/*	color: #f6c90e;*/
-/*	font-family: var(--r-heading-font);*/
-/*	font-size: 0.8em;*/
-/*	letter-spacing: 0.05em;*/
-/*	border-radius: 0 8px 0 6px;*/
-/*}*/
+.reveal pre code .hljs-ln-code {
+  padding-right: 1em;
+}
 
 /* =====================================================
    BLOCKQUOTE
@@ -350,12 +363,12 @@
   width: 85%;
   margin: var(--r-block-margin) auto;
   padding: 0.8em 1.2em 0.8em 1.5em;
-  background: #eaf4ff;
-  border-left: 5px solid #00527a;
+  background: rgba(0, 0, 0, 0.12);
+  border-left: 5px solid var(--dvx-orange);
   border-radius: 0 8px 8px 0;
   font-style: italic;
-  color: #002040;
-  box-shadow: 0 2px 8px rgba(0, 52, 89, 0.1);
+  color: var(--dvx-text);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .reveal blockquote p:first-child,
@@ -364,15 +377,15 @@
 }
 
 .reveal blockquote::before {
-  content: '"';
+  content: '\201C';
   position: absolute;
   top: -10px;
   left: 10px;
   font-size: 3em;
-  color: #00527a;
+  color: var(--dvx-orange);
   font-family: var(--r-heading-font);
   line-height: 1;
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
 /* =====================================================
@@ -384,33 +397,36 @@
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 52, 89, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
 }
 
 .reveal table th {
   font-family: var(--r-heading-font);
   font-weight: 400;
   letter-spacing: 0.05em;
-  background: #003459;
-  color: #f6c90e;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--dvx-yellow);
   padding: 0.5em 1em;
+  border-bottom: 2px solid var(--dvx-orange);
 }
 
 .reveal table td {
   padding: 0.4em 1em;
-  border-bottom: 1px solid #d0e8f4;
-  color: #002040;
-  background: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--dvx-text);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .reveal table tr:last-child td {
   border-bottom: none;
 }
+
 .reveal table tr:nth-child(even) td {
-  background: #f0f8ff;
+  background: rgba(0, 0, 0, 0.15);
 }
+
 .reveal table tr:hover td {
-  background: #e0f0fc;
+  background: rgba(0, 0, 0, 0.22);
 }
 
 /* =====================================================
@@ -423,17 +439,17 @@
 }
 
 .reveal .r-frame {
-  border: 4px solid #003459;
-  box-shadow: 0 0 10px rgba(0, 52, 89, 0.2);
+  border: 4px solid var(--dvx-yellow);
+  box-shadow: 0 0 10px rgba(231, 177, 39, 0.2);
 }
 
 .reveal a:hover .r-frame {
   border-color: var(--r-link-color-hover);
-  box-shadow: 0 0 20px rgba(0, 95, 138, 0.3);
+  box-shadow: 0 0 20px rgba(255, 244, 204, 0.3);
 }
 
 /* =====================================================
-   SÉLECTION
+   SELECTION
    ===================================================== */
 
 .reveal ::selection {
@@ -449,86 +465,82 @@
 }
 
 /* =====================================================
-   CONTRÔLES & PROGRESSION
+   CONTROLES & PROGRESSION
    ===================================================== */
 
 .reveal .controls {
-  color: #003459;
+  color: var(--dvx-yellow);
 }
 
 .reveal .progress {
   height: 4px;
-  background: rgba(0, 52, 89, 0.15);
-  color: #003459;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--dvx-orange);
 }
 
 .reveal .progress span {
-  background: linear-gradient(90deg, #003459, #00527a);
+  background: linear-gradient(90deg, var(--dvx-yellow), var(--dvx-orange));
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
 
 .reveal .slide-number {
-  background: rgba(0, 52, 89, 0.08);
-  color: #003459;
-  font-family: var(--r-heading-font);
-  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Pirulen', sans-serif;
+  font-size: 0.7em;
   letter-spacing: 0.05em;
   border-radius: 4px 4px 0 0;
   padding: 4px 10px;
 }
 
 /* =====================================================
-   SLIDE DE TITRE — fond océan foncé (exception volontaire)
-
-   La slide titre peut rester sombre pour l'impact visuel.
-   Usage : <section class="title-slide"> ou
-           data-background-color="#003459"
+   SLIDE DE TITRE
+   Fond plus sombre pour l'impact — peut aussi utiliser
+   une image de fond (data-background-image sur le Slide)
    ===================================================== */
 
 .reveal .slides section.title-slide {
-  background: linear-gradient(160deg, #001e3c 0%, #003459 60%, #00527a 100%);
+  background: linear-gradient(160deg, #1e3a2f 0%, #304936 60%, #3d5c4a 100%);
   border-radius: 4px;
 }
 
 .reveal .slides section.title-slide h1,
 .reveal .slides section.title-slide h2 {
-  color: #f6c90e;
-  text-shadow:
-    2px 2px 0 rgba(0, 0, 0, 0.4),
-    0 0 25px rgba(246, 201, 14, 0.3);
+  color: var(--dvx-yellow);
+  text-shadow: 0 0 30px rgba(231, 177, 39, 0.15);
 }
 
 .reveal .slides section.title-slide p,
 .reveal .slides section.title-slide small {
-  color: rgba(240, 248, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .reveal .slides section.title-slide a {
-  color: #7fffd4;
-  border-bottom-color: #7fffd4;
+  color: var(--dvx-alt-green);
+  border-bottom-color: var(--dvx-alt-green);
 }
 
 /* =====================================================
-   CLASSES UTILITAIRES THÉMATIQUES
+   CLASSES UTILITAIRES THEMATIQUES
    ===================================================== */
 
-/* Mise en valeur jaune Bob (adapté fond clair) */
+/* Highlight yellow (Devoxx accent) */
 .reveal .highlight-yellow {
-  color: #a07800;
+  color: var(--dvx-yellow);
   font-weight: 700;
 }
 
-/* Alerte Plancton / phishing */
+/* Danger / phishing */
 .reveal .danger,
 .reveal .plankton {
-  color: #c0392b;
+  color: var(--danger-red);
   font-weight: 700;
 }
 
-/* Succès / passkey sécurisé */
+/* Success / passkey secured */
 .reveal .success,
 .reveal .krusty {
-  color: #007a6a;
+  color: var(--dvx-alt-green);
   font-weight: 700;
 }
 
@@ -536,47 +548,47 @@
 .reveal .badge {
   display: inline-block;
   padding: 0.2em 0.6em;
-  background: #e0eef7;
-  border: 1px solid #00527a;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--dvx-orange);
   border-radius: 12px;
-  color: #003459;
+  color: var(--dvx-yellow);
   font-size: 0.7em;
   font-family: var(--r-code-font);
   letter-spacing: 0.05em;
   vertical-align: middle;
 }
 
-/* Encadré concept neutre */
+/* Concept box (neutral) */
 .reveal .concept-box {
-  background: #eaf4ff;
-  border: 2px solid #00527a;
+  background: rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--dvx-alt-green);
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.5em 0;
-  color: #002040;
+  color: var(--dvx-text);
 }
 
-/* Encadré phishing / danger */
+/* Phishing / danger box */
 .reveal .phishing-box {
-  background: #fff0ee;
-  border: 2px solid #c0392b;
+  background: rgba(231, 76, 60, 0.15);
+  border: 2px solid var(--danger-red);
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.5em 0;
-  color: #6b0e0e;
+  color: #fcd5d0;
 }
 
-/* Encadré passkey / sécurisé */
+/* Secure / passkey box */
 .reveal .secure-box {
-  background: #eaf7f4;
-  border: 2px solid #007a6a;
+  background: rgba(155, 193, 184, 0.2);
+  border: 2px solid var(--dvx-alt-green);
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.5em 0;
-  color: #003d35;
+  color: #dff0ec;
 }
 
-/* Layout deux colonnes */
+/* Two columns */
 .reveal .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -585,7 +597,7 @@
   text-align: left;
 }
 
-/* Layout personnage (photo + texte) */
+/* Character layout (photo + text) */
 .reveal .character-layout {
   display: flex;
   align-items: center;
@@ -595,8 +607,8 @@
 .reveal .character-layout img {
   max-width: 200px;
   border-radius: 50%;
-  border: 3px solid #003459;
-  box-shadow: 0 4px 16px rgba(0, 52, 89, 0.2);
+  border: 3px solid var(--dvx-yellow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
 
@@ -605,13 +617,15 @@
    ===================================================== */
 
 .reveal .fragment.highlight-yellow.visible {
-  color: #a07800;
+  color: var(--dvx-yellow);
 }
+
 .reveal .fragment.highlight-red.visible {
-  color: #c0392b;
+  color: var(--danger-red);
 }
+
 .reveal .fragment.highlight-green.visible {
-  color: #007a6a;
+  color: var(--dvx-alt-green);
 }
 
 /* =====================================================
@@ -627,6 +641,10 @@
     background: #fff !important;
   }
 }
+
+/* =====================================================
+   CODE STEP ANIMATIONS (highlight.js)
+   ===================================================== */
 
 .reveal .hljs.has-highlights tr:not(.highlight-line) {
   opacity: 0.15;

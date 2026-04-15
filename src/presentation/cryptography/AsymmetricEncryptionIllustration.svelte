@@ -94,7 +94,7 @@
         margin: 0;
         font-size: 0.7em;
         font-weight: bold;
-        color: #0d1b2a;
+        color: #f5f5f5;
       }
     }
   }

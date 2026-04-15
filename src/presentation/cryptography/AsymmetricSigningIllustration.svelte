@@ -1,14 +1,13 @@
 <script lang="ts">
-	import Slide from '$lib/Slide.svelte';
-	import RightArrow from './common/RightArrow.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-	import CryptoKey from './common/CryptoKey.svelte';
-	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-	import User from './common/User.svelte';
-	import PlainDocument from './common/PlainDocument.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import RightArrow from './common/RightArrow.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import CryptoKey from './common/CryptoKey.svelte';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+  import User from './common/User.svelte';
+  import PlainDocument from './common/PlainDocument.svelte';
 
-	const documentSize = 256;
-
+  const documentSize = 256;
 </script>
 
 <Slide>
@@ -25,7 +24,7 @@
       <PlainDocument size={documentSize} />
     </div>
     <div class="crypto-action fragment" data-fragment-index="2">
-      <div >
+      <div>
         <CryptoKey type="private" size="150" />
       </div>
       <div class="arrow">
@@ -47,7 +46,7 @@
       <PlainDocument size={documentSize} state="signed" />
     </div>
     <div class="crypto-action fragment" data-fragment-index="5">
-      <div >
+      <div>
         <CryptoKey type="public" size="150" />
       </div>
       <div class="arrow">
@@ -81,7 +80,6 @@
     }
 
     .crypto-action {
-
       .arrow {
         margin: -20px 0;
       }
@@ -90,7 +88,7 @@
         margin: 0;
         font-size: 0.7em;
         font-weight: bold;
-        color: #0d1b2a;
+        color: #f5f5f5;
       }
     }
   }

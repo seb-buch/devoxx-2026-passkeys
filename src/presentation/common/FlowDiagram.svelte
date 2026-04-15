@@ -9,16 +9,12 @@
     stepHeight: number;
     streamHeaderLineHeight: number;
     streamHeaderIconSize: number;
-    arrowFillColor: string;
-    arrowReturnFillColor: string;
   };
   const defaultStyle: Style = {
     streamWidth: 300,
     stepHeight: 60,
     streamHeaderLineHeight: 40,
-    streamHeaderIconSize: 40,
-    arrowFillColor: '#4a90d9',
-    arrowReturnFillColor: '#7ecfb3'
+    streamHeaderIconSize: 40
   };
 
   type CommunicationStep = {
@@ -121,28 +117,26 @@
         {@const startX = (step.from + 0.5) * style.streamWidth}
         {@const endX = (step.to + 0.5) * style.streamWidth}
         {@const middleX = 0.5 * (startX + endX)}
-        {@const fill = step.to > step.from ? '#4a90d9' : '#7ecfb3'}
+        {@const direction = step.to > step.from ? 'forward' : 'return'}
         <line
           x1={startX}
           y1={y}
           x2={endX}
           y2={y}
-          class="arrow"
-          stroke={fill}
+          class="arrow {direction}"
           marker-end={'url(#' + arrowId + ')'}
         />
-        <text x={middleX} y={y - 7} class="arrow-label" {fill}>{step.label}</text>
-        <circle cx={startX} cy={y} r="12" {fill} />
-        <text x={startX} {y} class="step num">{index + 1}</text>
+        <text x={middleX} y={y - 7} class="arrow-label {direction}">{step.label}</text>
+        <circle cx={startX} cy={y} r="12" class="step-circle" />
+        <text x={startX} {y} class="step-num">{index + 1}</text>
       {:else}
         {@const { startX, startY, width, height } = computeBoundingBox(index, step)}
         {@const midX = startX + width / 2}
         {@const midY = startY + height / 2}
-        {@const fill = '#4a90d9'}
         <rect x={startX} y={startY} {width} {height} rx="5" class="process-box" />
         <text x={midX} y={midY} class="process-label">{step.label}</text>
-        <circle cx={startX} cy={startY} r="12" {fill} />
-        <text x={startX} y={startY} class="step num">{index + 1}</text>
+        <circle cx={startX} cy={startY} r="12" class="step-circle" />
+        <text x={startX} y={startY} class="step-num">{index + 1}</text>
       {/if}
     </g>
   {/each}
@@ -160,39 +154,57 @@
       font-size: 16px;
       font-weight: bold;
       text-anchor: middle;
-      fill: #1e3c52;
+      fill: var(--flow-actor-name, #1e3c52);
     }
 
     .lifeline {
-      stroke: #4a90d9;
+      stroke: var(--flow-lifeline, #4a90d9);
       stroke-width: 1.5;
       stroke-dasharray: 5, 5;
-      opacity: 0.4;
+      opacity: var(--flow-lifeline-opacity, 0.4);
     }
 
-    .step {
-      &.num {
-        font-size: 14px;
-        font-weight: bold;
-        text-anchor: middle;
-        dominant-baseline: central;
-        fill: white;
-      }
+    .step-circle {
+      fill: var(--flow-step-bg, #4a90d9);
+    }
+
+    .step-num {
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: central;
+      fill: var(--flow-step-text, white);
     }
 
     .arrow {
       stroke-width: 2;
+
+      &.forward {
+        stroke: var(--flow-forward, #4a90d9);
+      }
+
+      &.return {
+        stroke: var(--flow-return, #7ecfb3);
+      }
     }
 
     .arrow-label {
       font-size: 14px;
       opacity: 0.9;
       text-anchor: middle;
+
+      &.forward {
+        fill: var(--flow-forward, #4a90d9);
+      }
+
+      &.return {
+        fill: var(--flow-return, #7ecfb3);
+      }
     }
 
     .process-box {
-      fill: #ddeeff;
-      stroke: #4a90d9;
+      fill: var(--flow-process-bg, #ddeeff);
+      stroke: var(--flow-process-stroke, #4a90d9);
       stroke-width: 1.5;
       stroke-dasharray: 5, 3;
     }
@@ -201,7 +213,7 @@
       font-size: 14px;
       text-anchor: middle;
       dominant-baseline: central;
-      fill: #1e3c52;
+      fill: var(--flow-process-text, #1e3c52);
     }
   }
 </style>

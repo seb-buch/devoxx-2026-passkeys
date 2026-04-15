@@ -73,7 +73,8 @@
 
 <style>
   svg {
-    path, circle {
+    path,
+    circle {
       fill-opacity: 1;
       stroke: #17395c;
       stroke-width: 1.5;

@@ -1,13 +1,13 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-	import browserIcon from '../assets/images/browser.png';
-	import serverIcon from '../assets/images/server.png';
-	import passwordStorageIcon from '../assets/images/password-storage.png';
-	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-	import FlowDiagram from '../common/FlowDiagram.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import browserIcon from '../assets/images/browser.png';
+  import serverIcon from '../assets/images/server.png';
+  import passwordStorageIcon from '../assets/images/password-storage.png';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+  import FlowDiagram from '../common/FlowDiagram.svelte';
 
-	const streamLines = [
+  const streamLines = [
     {
       iconPath: browserIcon,
       name: 'Navigateur'
