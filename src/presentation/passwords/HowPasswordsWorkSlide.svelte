@@ -1,13 +1,13 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import browserIcon from '../assets/images/browser.png';
-  import serverIcon from '../assets/images/server.png';
-  import passwordStorageIcon from '../assets/images/password-storage.png';
-  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-  import FlowDiagram from '../common/FlowDiagram.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import browserIcon from '../assets/images/browser.png';
+	import serverIcon from '../assets/images/server.png';
+	import passwordStorageIcon from '../assets/images/password-storage.png';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+	import FlowDiagram from '../common/FlowDiagram.svelte';
 
-  const streamLines = [
+	const streamLines = [
     {
       iconPath: browserIcon,
       name: 'Navigateur'
@@ -26,7 +26,7 @@
     { from: 0, to: 1, label: 'identifiant + 🔑 mot de passe' },
     { from: 1, to: 2, label: 'Hash pour identifiant ?' },
     { from: 2, to: 1, label: 'Hash' },
-    { location: 1, label: 'Comparaison avec Hash' },
+    { location: 1, label: 'Comparaison MdP Hashé / Hash stocké' },
     { from: 1, to: 0, label: '✔ Authentification réussie' }
   ];
 

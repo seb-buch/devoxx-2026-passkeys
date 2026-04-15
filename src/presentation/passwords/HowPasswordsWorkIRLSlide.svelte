@@ -1,12 +1,12 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import spyIcon from '../assets/images/spy.png';
-  import bossIcon from '../assets/images/boss.png';
-  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-  import FlowDiagram from '../common/FlowDiagram.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import spyIcon from '../assets/images/spy.png';
+	import bossIcon from '../assets/images/boss.png';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+	import FlowDiagram from '../common/FlowDiagram.svelte';
 
-  const streamLines = [
+	const streamLines = [
     {
       iconPath: spyIcon,
       name: 'Protagoniste 1'
@@ -19,7 +19,7 @@
 
   const steps = [
     { from: 0, to: 1, label: '🔑  Comment est votre blanquette ?' },
-    { from: 1, to: 0, label: '✔  Bonjour Hubert' }
+    { from: 1, to: 0, label: '✔  Elle est bonne. Bonjour Hubert.' }
   ];
 
   const flowDiagram = {
