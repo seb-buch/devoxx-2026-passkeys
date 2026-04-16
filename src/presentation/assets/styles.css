@@ -56,21 +56,21 @@
   --dvx-alt-green: #9bc1b8;
 
   /* --- Backgrounds --- */
-  --dvx-bg-main: #609689;
-  --dvx-bg-dark: #304936;
-  --dvx-bg-card: rgba(0, 0, 0, 0.12);
-  --dvx-bg-elevated: rgba(0, 0, 0, 0.2);
+  --dvx-bg-main: #F7F7F7;
+  --dvx-bg-dark: #E8E8E8;
+  --dvx-bg-card: rgba(0, 0, 0, 0.04);
+  --dvx-bg-elevated: rgba(0, 0, 0, 0.06);
 
   /* --- Text --- */
-  --dvx-text: #ffffff;
-  --dvx-text-muted: rgba(255, 255, 255, 0.7);
+  --dvx-text: #2B2B2B;
+  --dvx-text-muted: rgba(43, 43, 43, 0.6);
 
   /* --- SpongeBob narrative (semantic colors) --- */
   --ocean-deep: #003459;
-  --sponge-yellow: #e7b127;
-  --sea-green: #9bc1b8;
-  --danger-red: #e74c3c;
-  --sand-brown: #c8a96a;
+  --sponge-yellow: #8B6508;
+  --sea-green: #166534;
+  --danger-red: #B91C1C;
+  --sand-brown: #8B6914;
 
   /* --- reveal.js core variables --- */
   --r-background-color: var(--dvx-bg-main);
@@ -78,13 +78,13 @@
   --r-main-font: 'Open Sans', sans-serif;
   --r-main-font-size: 38px;
 
-  --r-heading-font: 'Pirulen', 'Conthrax', sans-serif;
-  --r-heading-color: var(--dvx-yellow);
-  --r-heading-line-height: 1.15;
-  --r-heading-letter-spacing: 0.04em;
-  --r-heading-text-transform: uppercase;
+  --r-heading-font: 'Conthrax', sans-serif;
+  --r-heading-color: var(--dvx-orange);
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: 0.01em;
+  --r-heading-text-transform: none;
   --r-heading-text-shadow: none;
-  --r-heading-font-weight: 400;
+  --r-heading-font-weight: 600;
   --r-heading-margin: 0 0 20px 0;
 
   --r-heading1-size: 2.2em;
@@ -92,9 +92,8 @@
   --r-heading3-size: 1.2em;
   --r-heading4-size: 1em;
 
-  --r-link-color: #ffe08a;
-  --r-link-color-dark: var(--dvx-yellow);
-  --r-link-color-hover: #fff4cc;
+  --r-link-color: var(--dvx-logo-orange);
+  --r-link-color-hover: var(--dvx-orange);
 
   --r-selection-background-color: var(--dvx-orange);
   --r-selection-color: #fff;
@@ -112,32 +111,6 @@
   background-color: var(--dvx-bg-main);
 }
 
-/* Orange accent bar at the bottom (Devoxx signature) */
-.reveal-viewport::after {
-  content: '';
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background: var(--dvx-orange);
-  z-index: 100;
-}
-
-/* Devoxx France 2026 stamp — top-right branding */
-.reveal-viewport::before {
-  content: 'DEVOXX FRANCE 2026';
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-family: 'Pirulen', sans-serif;
-  font-size: 0.5em;
-  color: rgba(255, 255, 255, 0.45);
-  background: rgba(0, 0, 0, 0.25);
-  padding: 6px 16px;
-  z-index: 100;
-  letter-spacing: 0.08em;
-}
 
 /* =====================================================
    SLIDES
@@ -179,33 +152,19 @@
 
 .reveal h1 {
   font-size: var(--r-heading1-size);
-  color: var(--dvx-yellow);
 }
 
 .reveal h2 {
   font-size: var(--r-heading2-size);
-  color: var(--dvx-yellow);
 }
 
 .reveal h3 {
   font-size: var(--r-heading3-size);
-  color: var(--dvx-yellow);
 }
 
 .reveal h4 {
   font-size: var(--r-heading4-size);
-  color: var(--dvx-alt-green);
-}
-
-/* Decorative line under h2 — orange accent */
-.reveal h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--dvx-orange), transparent);
-  margin: 8px auto 0;
-  border-radius: 2px;
+  color: var(--dvx-text-muted);
 }
 
 /* =====================================================
@@ -219,13 +178,13 @@
 
 .reveal strong,
 .reveal b {
-  color: #fff;
+  color: var(--ocean-deep);
   font-weight: 700;
 }
 
 .reveal em,
 .reveal i {
-  color: var(--dvx-yellow);
+  color: var(--dvx-orange);
   font-style: italic;
 }
 
@@ -320,6 +279,7 @@
   line-height: 1.4em;
   font-family: var(--r-heading-font);
   font-size: 0.85em;
+  font-weight: 600;
   letter-spacing: 0;
   vertical-align: middle;
 }
@@ -330,11 +290,11 @@
 
 .reveal :not(pre) > code {
   font-family: var(--r-code-font);
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 6px;
   padding: 0.05em 0.3em;
-  color: #ffe08a;
+  color: #B91C1C;
   font-size: 0.9em;
 }
 
@@ -363,12 +323,12 @@
   width: 85%;
   margin: var(--r-block-margin) auto;
   padding: 0.8em 1.2em 0.8em 1.5em;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.03);
   border-left: 5px solid var(--dvx-orange);
   border-radius: 0 8px 8px 0;
   font-style: italic;
   color: var(--dvx-text);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .reveal blockquote p:first-child,
@@ -402,19 +362,19 @@
 
 .reveal table th {
   font-family: var(--r-heading-font);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  background: rgba(0, 0, 0, 0.25);
-  color: var(--dvx-yellow);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--ocean-deep);
+  color: #ffffff;
   padding: 0.5em 1em;
   border-bottom: 2px solid var(--dvx-orange);
 }
 
 .reveal table td {
   padding: 0.4em 1em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   color: var(--dvx-text);
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .reveal table tr:last-child td {
@@ -422,11 +382,11 @@
 }
 
 .reveal table tr:nth-child(even) td {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .reveal table tr:hover td {
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 /* =====================================================
@@ -469,26 +429,26 @@
    ===================================================== */
 
 .reveal .controls {
-  color: var(--dvx-yellow);
+  color: var(--ocean-deep);
 }
 
 .reveal .progress {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.15);
+  height: 8px;
+  background: rgba(0, 0, 0, 0.08);
   color: var(--dvx-orange);
 }
 
 .reveal .progress span {
-  background: linear-gradient(90deg, var(--dvx-yellow), var(--dvx-orange));
+  background: linear-gradient(90deg, var(--dvx-logo-orange), var(--dvx-orange));
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
 
 .reveal .slide-number {
-  background: rgba(0, 0, 0, 0.15);
-  color: rgba(255, 255, 255, 0.6);
-  font-family: 'Pirulen', sans-serif;
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(43, 43, 43, 0.5);
+  font-family: 'Poppins', sans-serif;
   font-size: 0.7em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   border-radius: 4px 4px 0 0;
   padding: 4px 10px;
 }
@@ -500,33 +460,33 @@
    ===================================================== */
 
 .reveal .slides section.title-slide {
-  background: linear-gradient(160deg, #1e3a2f 0%, #304936 60%, #3d5c4a 100%);
+  background: linear-gradient(160deg, #002040 0%, #003459 60%, #004a7c 100%);
   border-radius: 4px;
 }
 
 .reveal .slides section.title-slide h1,
 .reveal .slides section.title-slide h2 {
-  color: var(--dvx-yellow);
-  text-shadow: 0 0 30px rgba(231, 177, 39, 0.15);
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .reveal .slides section.title-slide p,
 .reveal .slides section.title-slide small {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .reveal .slides section.title-slide a {
-  color: var(--dvx-alt-green);
-  border-bottom-color: var(--dvx-alt-green);
+  color: #93C5FD;
+  border-bottom-color: #93C5FD;
 }
 
 /* =====================================================
    CLASSES UTILITAIRES THEMATIQUES
    ===================================================== */
 
-/* Highlight yellow (Devoxx accent) */
+/* Highlight accent */
 .reveal .highlight-yellow {
-  color: var(--dvx-yellow);
+  color: var(--sponge-yellow);
   font-weight: 700;
 }
 
@@ -540,7 +500,7 @@
 /* Success / passkey secured */
 .reveal .success,
 .reveal .krusty {
-  color: var(--dvx-alt-green);
+  color: var(--sea-green);
   font-weight: 700;
 }
 
@@ -548,20 +508,20 @@
 .reveal .badge {
   display: inline-block;
   padding: 0.2em 0.6em;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.05);
   border: 1px solid var(--dvx-orange);
   border-radius: 12px;
-  color: var(--dvx-yellow);
+  color: var(--ocean-deep);
   font-size: 0.7em;
   font-family: var(--r-code-font);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   vertical-align: middle;
 }
 
 /* Concept box (neutral) */
 .reveal .concept-box {
-  background: rgba(0, 0, 0, 0.12);
-  border: 2px solid var(--dvx-alt-green);
+  background: rgba(0, 52, 89, 0.05);
+  border: 2px solid var(--ocean-deep);
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.5em 0;
@@ -570,22 +530,22 @@
 
 /* Phishing / danger box */
 .reveal .phishing-box {
-  background: rgba(231, 76, 60, 0.15);
+  background: rgba(185, 28, 28, 0.06);
   border: 2px solid var(--danger-red);
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.5em 0;
-  color: #fcd5d0;
+  color: var(--danger-red);
 }
 
 /* Secure / passkey box */
 .reveal .secure-box {
-  background: rgba(155, 193, 184, 0.2);
-  border: 2px solid var(--dvx-alt-green);
+  background: rgba(22, 101, 52, 0.06);
+  border: 2px solid var(--sea-green);
   border-radius: 10px;
   padding: 0.6em 1em;
   margin: 0.5em 0;
-  color: #dff0ec;
+  color: var(--sea-green);
 }
 
 /* Two columns */
@@ -607,8 +567,8 @@
 .reveal .character-layout img {
   max-width: 200px;
   border-radius: 50%;
-  border: 3px solid var(--dvx-yellow);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--ocean-deep);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: 0;
 }
 
@@ -617,7 +577,7 @@
    ===================================================== */
 
 .reveal .fragment.highlight-yellow.visible {
-  color: var(--dvx-yellow);
+  color: var(--sponge-yellow);
 }
 
 .reveal .fragment.highlight-red.visible {
@@ -625,7 +585,7 @@
 }
 
 .reveal .fragment.highlight-green.visible {
-  color: var(--dvx-alt-green);
+  color: var(--sea-green);
 }
 
 /* =====================================================

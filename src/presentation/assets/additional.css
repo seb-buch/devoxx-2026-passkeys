@@ -12,16 +12,16 @@
    ===================================================== */
 
 .diagram {
-  --flow-forward: #ffffff;
-  --flow-return: #e7b127;
-  --flow-step-bg: #304936;
+  --flow-forward: #003459;
+  --flow-return: #166534;
+  --flow-step-bg: #003459;
   --flow-step-text: #ffffff;
-  --flow-actor-name: #f5f5f5;
-  --flow-lifeline: #ffffff;
-  --flow-lifeline-opacity: 0.25;
-  --flow-process-bg: rgba(231, 177, 39, 0.1);
-  --flow-process-stroke: #e7b127;
-  --flow-process-text: #f5f5f5;
+  --flow-actor-name: #2B2B2B;
+  --flow-lifeline: #003459;
+  --flow-lifeline-opacity: 0.2;
+  --flow-process-bg: rgba(0, 52, 89, 0.06);
+  --flow-process-stroke: #003459;
+  --flow-process-text: #2B2B2B;
 }
 
 
