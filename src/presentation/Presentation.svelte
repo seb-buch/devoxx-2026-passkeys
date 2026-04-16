@@ -48,7 +48,7 @@
 <Who />
 
 <section>
-  <SubSectionTitleSlide title="Pendant ce temps à Bikini Bottom..." />
+  <SubSectionTitleSlide title="Pendant ce temps à<br/>Bikini Bottom..." />
   <IntroductionSlide/>
   <Slide>
     <h3>Présentation Krabsvault</h3>
