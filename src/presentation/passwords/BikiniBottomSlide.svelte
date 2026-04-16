@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Slide from '$lib/Slide.svelte';
-	import backgroundImage from './assets/images/The_Krusty_Krab_background.webp';
-	import bob from './assets/images/spongebob_cook.webp';
-	import patty from './assets/images/Krabby_Patty.webp';
-	import krabs from './assets/images/mr-krabs.png';
+	import backgroundImage from '../assets/images/The_Krusty_Krab_background.webp';
+	import bob from '../assets/images/spongebob_cook.webp';
+	import patty from '../assets/images/Krabby_Patty.webp';
+	import krabs from '../assets/images/mr-krabs.png';
 	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 

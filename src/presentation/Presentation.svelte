@@ -11,8 +11,6 @@
 	import Who from './Who.svelte';
 
 	// Passwords
-	import PasswordProblems from './passwords/PasswordProblems.svelte';
-
 	// Phishing
 	// Passkeys concepts
 	import AsymmetricCryptoSlide from './cryptography/AsymmetricCryptoSlide.svelte';
@@ -34,8 +32,7 @@
 	import RegistrationFlowSlide from './webauthn-registration/RegistrationFlowSlide.svelte';
 	import AuthenticationFlowSlide from './webauthn-authentication/AuthenticationFlowSlide.svelte';
 	import SubSectionTitleSlide from './common/SubSectionTitleSlide.svelte';
-	import Slide from '$lib/Slide.svelte';
-	import IntroductionSlide from './IntroductionSlide.svelte';
+	import PasswordSection from './PasswordSection.svelte';
 </script>
 
 <svelte:head>
@@ -47,19 +44,7 @@
 
 <Who />
 
-<section>
-  <SubSectionTitleSlide title="Pendant ce temps à<br/>Bikini Bottom..." />
-  <IntroductionSlide/>
-  <Slide>
-    <h3>Présentation Krabsvault</h3>
-    <p>Présentation Krabsvault + démo authentification password</p>
-  </Slide>
-  <PasswordProblems />
-  <Slide>
-    <h3>Démo phishing</h3>
-    <p>Démo phishing avec un site malveillant</p>
-  </Slide>
-</section>
+<PasswordSection/>
 
 <section>
   <SectionTitleSlide title="S'authentifier sans partager de secret ?" />

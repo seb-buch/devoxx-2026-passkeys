@@ -1,17 +1,22 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import Slide from '$lib/Slide.svelte';
 	import backgroundImage from '../assets/images/spongebob-time-card-background.jpeg';
 
 	type Props = {
-    title: string;
+    title?: string;
+    children?: Snippet;
   };
 
-  const { title }: Props = $props();
+  const { title="", children }: Props = $props();
 </script>
 
 <Slide {backgroundImage}>
   <div class="section-title">
-    <h3>{@html title}</h3>
+      <h3>{@html title}</h3>
+    {#if children}
+      {@render children()}
+    {/if}
   </div>
 </Slide>
 
@@ -20,6 +25,7 @@
 
   .section-title {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 1080px;
@@ -28,17 +34,17 @@
   .section-title h3 {
     font-family: 'Titan One', cursive;
     font-size: 2.5em;
-    color: blueviolet;
+    color: white;
     text-transform: uppercase;
     text-shadow:
-      3px 3px 0 violet,
-      -2px -2px 0 violet,
-      2px -2px 0 violet,
-      -2px 2px 0 violet,
-      0 3px 0 violet,
-      3px 0 0 violet,
-      0 -2px 0 violet,
-      -2px 0 0 violet;
+      3px 3px 0 #1B1464,
+      -2px -2px 0 #1B1464,
+      2px -2px 0 #1B1464,
+      -2px 2px 0 #1B1464,
+      0 3px 0 #1B1464,
+      3px 0 0 #1B1464,
+      0 -2px 0 #1B1464,
+      -2px 0 0 #1B1464;
     letter-spacing: 0.1em;
     line-height: 2;
   }
