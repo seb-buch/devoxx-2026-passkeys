@@ -34,20 +34,22 @@
 </article>
 
 <style lang="css">
-  .email-window {
-    --bg: #f6f7f8; /* very light gray */
-    --muted: #6b7280;
-    --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-    --card: #ffffff;
-    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
-    --sans: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
-    font-family: sans-serif;
+  .email-window {
+    --bg: #e8f4f0;
+    --muted: #3b6e5e;
+    --shadow: 0 6px 24px rgba(0, 52, 89, 0.15);
+    --card: #faf6ee;
+    --sans: 'Patrick Hand', cursive, system-ui, sans-serif;
+
+    font-family: var(--sans);
     font-size: 1em;
 
     background: var(--bg);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
+    border: 2px solid #7bbcaa;
 
     max-width: 980px;
     margin: 0 auto;
@@ -60,7 +62,7 @@
     justify-content: center;
 
     .window-menu {
-      background: #3d3f47;
+      background: linear-gradient(135deg, #1a7a6a, #2a9d8f);
       height: 36px;
       display: flex;
       align-items: center;
@@ -73,23 +75,21 @@
       display: inline-block;
       width: 16px;
       height: 16px;
-      background: #f9f9f9;
       border-radius: 50%;
-      margin: 0 0 0 0;
 
       &.red {
-        background: #ff6057;
-        border: 1px solid #e14640;
+        background: #e76f51;
+        border: 1px solid #c45a3f;
       }
 
       &.amber {
-        background: #ffbd2e;
-        border: 1px solid #dfa123;
+        background: #e9c46a;
+        border: 1px solid #d4a843;
       }
 
       &.green {
-        background: #27c93f;
-        border: 1px solid #1dad2b;
+        background: #59d9a4;
+        border: 1px solid #3cb880;
       }
     }
 
@@ -109,22 +109,24 @@
     .email-content {
       min-height: 400px;
       background: var(--card);
-      border: 1px #ccc solid;
+      border: 1px solid #c8d9b8;
+      border-radius: 6px;
       text-align: left;
       padding: 10px;
       overflow-y: auto;
     }
 
     .email {
-      background: #c8e9ff;
+      background: #b8e4d8;
       border-radius: 1em;
-      padding: 0 0.3em;
+      padding: 0 0.4em;
       color: var(--muted);
     }
 
     .field {
       padding-right: 0.2em;
       font-weight: bold;
+      color: #003459;
     }
   }
 </style>

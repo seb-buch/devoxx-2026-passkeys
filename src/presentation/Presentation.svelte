@@ -23,16 +23,15 @@
 	import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
 	import Resources from './conclusion/Resources.svelte';
 	import Thanks from './conclusion/Thanks.svelte';
-	import AsymmetricEncryptionIllustration
-		from './cryptography/AsymmetricEncryptionIllustration.svelte';
 	import SectionTitleSlide from './common/SectionTitleSlide.svelte';
 	import AsymmetricSigningIllustration from './cryptography/AsymmetricSigningIllustration.svelte';
 	import Fido2Slide from './webauthn-intro/Fido2Slide.svelte';
 	import WhatIsPasskey from './webauthn-intro/WhatIsPasskey.svelte';
 	import RegistrationFlowSlide from './webauthn-registration/RegistrationFlowSlide.svelte';
 	import AuthenticationFlowSlide from './webauthn-authentication/AuthenticationFlowSlide.svelte';
-	import SubSectionTitleSlide from './common/SubSectionTitleSlide.svelte';
+	import TransitionSlide from './common/TransitionSlide.svelte';
 	import PasswordSection from './PasswordSection.svelte';
+	import krabsvault from './assets/images/krabsvault-logo.png';
 </script>
 
 <svelte:head>
@@ -47,31 +46,42 @@
 <PasswordSection/>
 
 <section>
-  <SectionTitleSlide title="S'authentifier sans partager de secret ?" />
+  <SectionTitleSlide title="Authentifier sans mot de passe ?" />
   <AsymmetricCryptoSlide />
-  <AsymmetricEncryptionIllustration />
   <AsymmetricSigningIllustration />
 </section>
 
 <section>
-  <SectionTitleSlide title="S'authentifier sans partage de secret avec FIDO2" />
+  <SectionTitleSlide title="Authentification avec FIDO2" />
   <Fido2Slide />
   <WhatIsPasskey />
 </section>
 
 <section>
-  <SectionTitleSlide title="Enregistrement d'une Passkey" />
+  <SectionTitleSlide title="1. Enregistrement d'une Passkey" />
 
   <RegistrationFlowSlide />
 
-  <SubSectionTitleSlide title="En pratique (live coding)" />
+  <TransitionSlide title="En pratique" >
+    <p>
+      <a href="https://krabsvault.com/" target="krabsvault">
+        <img src={krabsvault} alt="Krabsvault" />
+      </a>
+    </p>
+  </TransitionSlide>
 </section>
 
 <section>
-  <SectionTitleSlide title="Authentification avec une Passkey" />
+  <SectionTitleSlide title="2. Authentification avec une Passkey" />
 
   <AuthenticationFlowSlide />
-  <SubSectionTitleSlide title="En pratique (live coding)" />
+  <TransitionSlide title="En pratique" >
+    <p>
+      <a href="https://krabsvault.com/" target="krabsvault">
+        <img src={krabsvault} alt="Krabsvault" />
+      </a>
+    </p>
+  </TransitionSlide>
 </section>
 
 <section>

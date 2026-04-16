@@ -1,10 +1,10 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <Slide>
-  <h3>C'est quoi une <em>Passkey</em>&nbsp;?</h3>
+  <h3>Au fait, c'est quoi une <em>Passkey</em>&nbsp;?</h3>
   <ul class="w3c-terms">
     <li class="important">Passkey</li>
     <li>Client-side discoverable Public Key Credential Source</li>

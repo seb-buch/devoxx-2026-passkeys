@@ -27,7 +27,7 @@
   .devoxx-title-slide {
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 1080px;
     justify-content: flex-end;
     background: linear-gradient(
       to top,
@@ -35,6 +35,7 @@
       rgba(48, 73, 54, 0.70) 50%,
       rgba(48, 73, 54, 0.30) 100%
     );
+    backdrop-filter: blur(5px);
   }
 
 

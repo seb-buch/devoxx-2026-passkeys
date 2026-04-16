@@ -8,11 +8,11 @@
 </script>
 
 <Slide {backgroundImage}>
-  <figure class="intro-blur">
+  <div class="intro-blur">
     <img src={bob} alt="Bob" class="fragment"/>
     <img src={patty} alt="Patty" class="fragment"/>
     <img src={krabs} alt="Krabs" class="fragment"/>
-  </figure>
+  </div>
   <SpeakerNotes>
     <p>
       Pour ceux qui ne connaissent pas Bikini Bottom, le restaurant le plus populaire du coin,
@@ -27,12 +27,12 @@
 </Slide>
 
 <style>
- figure {
+ div.intro-blur {
    display: flex;
    justify-content: center;
    align-items: center;
    gap: 20px;
-   height: 1000px;
+   height: 1080px;
 
 
    img {

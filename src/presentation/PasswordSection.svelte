@@ -1,26 +1,23 @@
 <script>
 	import krabsvault from './assets/images/krabsvault-logo.png';
-	import SubSectionTitleSlide from './common/SubSectionTitleSlide.svelte';
-	import Slide from '$lib/Slide.svelte';
+	import TransitionSlide from './common/TransitionSlide.svelte';
 	import BikiniBottomSlide from './passwords/BikiniBottomSlide.svelte';
 	import PasswordProblems from './passwords/PasswordProblems.svelte';
+	import PhishingTransitionSlide from './passwords/PhishingTransitionSlide.svelte';
 </script>
 
 <section>
-  <SubSectionTitleSlide title="Pendant ce temps à<br/>Bikini Bottom..." />
+  <TransitionSlide title="Pendant ce temps à<br/>Bikini Bottom..." />
 
   <BikiniBottomSlide/>
 
-  <SubSectionTitleSlide title="Présentation Krabsvault">
+  <TransitionSlide title="Présentation Krabsvault">
     <p>
       <a href="https://krabsvault.com/" target="krabsvault">
         <img src={krabsvault} alt="Krabsvault" />
       </a>
     </p>
-  </SubSectionTitleSlide>
+  </TransitionSlide>
   <PasswordProblems />
-  <Slide>
-    <h3>Démo phishing</h3>
-    <p>Démo phishing avec un site malveillant</p>
-  </Slide>
+  <PhishingTransitionSlide/>
 </section>

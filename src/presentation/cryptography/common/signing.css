@@ -1,0 +1,41 @@
+.bob-document.fragment {
+  position: relative;
+  top: 420px;
+
+  &.visible {
+    top: 0;
+  }
+}
+
+.alice-key.fragment {
+  position: relative;
+  top: -400px;
+
+  &.visible {
+    top: 0;
+  }
+}
+
+.bob-document-signed.fragment {
+  position: relative;
+  top: -420px;
+  left: 510px;
+
+
+  &.visible {
+    top: 0;
+    visibility: visible;
+    left: 0;
+  }
+}
+
+.alice-private-key.fragment , .bob-verification-key.fragment{
+  position: relative;
+  left: -470px;
+  top: 170px;
+
+  &.visible {
+    top: 0;
+    left: 0;
+  }
+}
