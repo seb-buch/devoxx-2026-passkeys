@@ -17,10 +17,8 @@
 
 	// Implementation
 	// Conclusion
-	import Limits from './conclusion/Limits.svelte';
-	import PasswordsNotDead from './conclusion/PasswordsNotDead.svelte';
-	import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
-	import Resources from './conclusion/Resources.svelte';
+	import ImplementationRecap from './conclusion/ImplementationRecap.svelte';
+	import PasskeysVsPasswords from './conclusion/PasskeysVsPasswords.svelte';
 	import Thanks from './conclusion/Thanks.svelte';
 	import SectionTitleSlide from './common/SectionTitleSlide.svelte';
 	import AsymmetricSigningIllustration from './cryptography/AsymmetricSigningIllustration.svelte';
@@ -93,9 +91,7 @@
 
 <section>
   <SectionTitleSlide title="Conclusion" />
-  <Limits />
-  <PasswordsNotDead />
-  <KeyTakeaways />
-  <Resources />
+  <ImplementationRecap />
+  <PasskeysVsPasswords />
 </section>
 <Thanks />
