@@ -1,18 +1,25 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import qrCodeRepo from '../assets/images/QRcode_github.svg';
 </script>
 
 <Slide backgroundImage="/devoxx/bg-image11.jpg" backgroundSize="cover">
   <div class="thanks-overlay">
-    <h1>Merci !</h1>
-    <VerticalSpacer height="1em" />
-    <h3>Questions ?</h3>
-    <VerticalSpacer height="1em" />
-    <p>Sébastien Buchoux</p>
-    <p><em>[GitHub · LinkedIn · X/Twitter]</em></p>
-    <p><em>[QR code vers le repo KrabsVault]</em></p>
+    <div class="thanks-content">
+      <figure>
+        <img src={qrCodeRepo} alt="QR code repo GitHub" />
+        <figcaption>Diapos et code</figcaption>
+      </figure>
+      <div class="center">
+        <h1>Merci !</h1>
+        <h3>Questions ?</h3>
+      </div>
+      <figure>
+        <div class="placeholder">QR code à venir</div>
+        <figcaption>Feedback</figcaption>
+      </figure>
+    </div>
   </div>
   <SpeakerNotes>
     Et voilà, c'est terminé ! Merci beaucoup pour votre attention. Si vous avez des questions, c'est
@@ -23,17 +30,52 @@
 
 <style>
   .thanks-overlay {
+    display: flex;
+    flex-direction: column;
+    height: 1080px;
+    justify-content: center;
     background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.75) 0%,
-      rgba(0, 0, 0, 0.3) 60%,
-      transparent 100%
+        to top,
+        rgba(48, 73, 54 ,0.9) 0%,
+        rgba(48, 73, 54, 0.70) 50%,
+        rgba(48, 73, 54, 0.30) 100%
     );
-    padding: 2em 1.5em 1.5em;
+    backdrop-filter: blur(5px);
+  }
+
+  .thanks-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .center {
+      flex-grow: 1;
+    }
+
+    figure {
+      padding: 1rem;
+      border-radius: 8px;
+      background: var(--r-background-color);
+
+      img {
+        height: 20rem;
+      }
+      figcaption {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .placeholder {
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed rgba(31, 29, 29 ,0.5);
     border-radius: 8px;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
+    color: rgba(31, 29, 29 ,0.5);
+    font-size: 0.9em;
   }
 </style>

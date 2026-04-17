@@ -3,14 +3,14 @@
 	import backgroundImage from '../assets/images/The_Krusty_Krab_background.webp';
 	import bob from '../assets/images/spongebob_cook.webp';
 	import patty from '../assets/images/Krabby_Patty.webp';
-	import krabs from '../assets/images/mr-krabs.png';
+	import krabs from '../assets/images/mr-krabs.webp';
 	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
-<Slide {backgroundImage}>
+<Slide {backgroundImage} backgroundSize="contain" backgroundColor="#55bbff">
   <div class="intro-blur">
     <img src={bob} alt="Bob" class="fragment"/>
-    <img src={patty} alt="Patty" class="fragment"/>
+    <img src={patty} alt="Patty" class="fragment patty"/>
     <img src={krabs} alt="Krabs" class="fragment"/>
   </div>
   <SpeakerNotes>
@@ -29,16 +29,19 @@
 <style>
  div.intro-blur {
    display: flex;
-   justify-content: center;
    align-items: center;
-   gap: 20px;
+   justify-content: space-around;
    height: 1080px;
 
 
    img {
      display: inline-flex;
-     width: 600px;
+     width: 500px;
      height: fit-content;
+
+     &.patty {
+       width: 400px;
+     }
    }
 
 

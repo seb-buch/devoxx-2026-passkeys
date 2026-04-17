@@ -1,22 +1,11 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
 	import Slide from '$lib/Slide.svelte';
 	import backgroundImage from '../assets/images/spongebob-time-card-background.jpeg';
-
-	type Props = {
-    title?: string;
-    children?: Snippet;
-  };
-
-  const { title="", children }: Props = $props();
 </script>
 
 <Slide {backgroundImage}>
   <div class="section-title">
-      <h3>{@html title}</h3>
-    {#if children}
-      {@render children()}
-    {/if}
+      <h3>Pendant ce temps à<br/>Bikini Bottom...</h3>
   </div>
 </Slide>
 

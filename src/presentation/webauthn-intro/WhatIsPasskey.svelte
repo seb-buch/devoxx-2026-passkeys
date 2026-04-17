@@ -10,8 +10,8 @@
     <li>Client-side discoverable Public Key Credential Source</li>
     <li>Client-side discoverable Credential</li>
     <li>Discoverable Credential</li>
-    <li class="deprecated">Resident Credential</li>
-    <li class="deprecated">Resident Key</li>
+    <li ><span class="deprecated">Resident Credential</span></li>
+    <li ><span class="deprecated">Resident Key</span></li>
   </ul>
   <p class="w3c-definition">
     <b>A Client-side discoverable Public Key Credential Source</b> [&hellip;] is a public key
@@ -61,7 +61,6 @@
     gap: 0.5em;
     list-style: none;
     margin-top: 2em;
-
     li {
       &:before {
         content: 'ou';
@@ -78,15 +77,15 @@
       font-weight: bold;
       font-family: var(--r-code-font) monospace;
 
-      &.deprecated {
+    }
+  }
+      .deprecated {
         text-decoration: line-through;
       }
 
-      &.important {
+      .important {
         text-decoration: underline;
       }
-    }
-  }
 
   .w3c-definition {
     font-size: 0.7em;

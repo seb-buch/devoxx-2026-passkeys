@@ -26,10 +26,10 @@
 	import WhatIsPasskey from './webauthn-intro/WhatIsPasskey.svelte';
 	import RegistrationFlowSlide from './webauthn-registration/RegistrationFlowSlide.svelte';
 	import AuthenticationFlowSlide from './webauthn-authentication/AuthenticationFlowSlide.svelte';
-	import TransitionSlide from './common/TransitionSlide.svelte';
+	import DemoTransitionSlide from './common/DemoTransitionSlide.svelte';
 	import PasswordSection from './PasswordSection.svelte';
-	import krabsvault from './assets/images/krabsvault-logo.png';
 	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import LiveCodingTransitionSlide from './common/LiveCodingTransitionSlide.svelte';
 </script>
 
 <svelte:head>
@@ -67,26 +67,15 @@
 
   <RegistrationFlowSlide />
 
-  <TransitionSlide title="En pratique" >
-    <p>
-      <a href="https://krabsvault.com/" target="krabsvault">
-        <img src={krabsvault} alt="Krabsvault" />
-      </a>
-    </p>
-  </TransitionSlide>
+  <LiveCodingTransitionSlide project="krabsvault-py" path="src/krabsvault/app.py:36" />
 </section>
 
 <section>
   <SectionTitleSlide title="2. Authentification avec une Passkey" />
 
   <AuthenticationFlowSlide />
-  <TransitionSlide title="En pratique" >
-    <p>
-      <a href="https://krabsvault.com/" target="krabsvault">
-        <img src={krabsvault} alt="Krabsvault" />
-      </a>
-    </p>
-  </TransitionSlide>
+  <LiveCodingTransitionSlide project="krabsvault-py" />
+  <DemoTransitionSlide />
 </section>
 
 <section>
