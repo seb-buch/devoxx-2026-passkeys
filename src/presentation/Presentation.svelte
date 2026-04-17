@@ -17,7 +17,6 @@
 
 	// Implementation
 	// Conclusion
-	import SyncVsDeviceBound from './conclusion/SyncVsDeviceBound.svelte';
 	import Limits from './conclusion/Limits.svelte';
 	import PasswordsNotDead from './conclusion/PasswordsNotDead.svelte';
 	import KeyTakeaways from './conclusion/KeyTakeaways.svelte';
@@ -32,6 +31,7 @@
 	import TransitionSlide from './common/TransitionSlide.svelte';
 	import PasswordSection from './PasswordSection.svelte';
 	import krabsvault from './assets/images/krabsvault-logo.png';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <svelte:head>
@@ -52,7 +52,14 @@
 </section>
 
 <section>
-  <SectionTitleSlide title="Authentification avec FIDO2" />
+  <SectionTitleSlide title="Authentification avec FIDO2">
+    <SpeakerNotes>
+      <p>
+        Ce que je viens de décrire correspond au principe à la base de l'authentification avec une Passkey,
+        qui a été standardisée par l'alliance FIDO à travers la spécification FIDO2.
+      </p>
+    </SpeakerNotes>
+  </SectionTitleSlide>
   <Fido2Slide />
   <WhatIsPasskey />
 </section>
@@ -86,7 +93,6 @@
 
 <section>
   <SectionTitleSlide title="Conclusion" />
-  <SyncVsDeviceBound />
   <Limits />
   <PasswordsNotDead />
   <KeyTakeaways />
