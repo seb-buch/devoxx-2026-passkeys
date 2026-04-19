@@ -8,6 +8,6 @@
   const { children }: Props = $props();
 </script>
 
-<aside class="notes" data-markdown>
+<aside class="notes">
   {@render children()}
 </aside>

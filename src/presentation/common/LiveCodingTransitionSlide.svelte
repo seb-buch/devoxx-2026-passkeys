@@ -62,7 +62,7 @@
   }
 
   .live-coding img {
-    max-height: 400px;
+    max-height: 500px;
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease;
   }

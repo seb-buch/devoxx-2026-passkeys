@@ -20,11 +20,11 @@
   </div>
   <SpeakerNotes>
     <p>
-      Pour illustrer cette sensibilité au phishing, voici un exemple de courriel de phishing qui
-      pourrait être reçu par Bob. Et qui ressemble probablement à des mails que vous avez peut-être
-      reçu dans le passé. Bob reçoit ce mail de Mr Krabs, même si on peut en douter en le lisant,
-      mais bon c'est Bob! Donc il se sent obliger d'obéir et se rend sur le site du vault en
-      cliquant sur le lien.
+      A priori, rien de suspect dans cet email... Enfin, c'est ce que se dit Bob.<br />
+      Parce que si on regarde, il y a des choses un peu suspectes quand même.<br />
+      Mais bon, c'est Bob. Il fait confiance, il clique, il tombe sur un site qui ressemble trait pour
+      trait à KrabsVault, et il entre son mot de passe.<br />
+      Et voilà, Plankton a maintenant le mot de passe de Bob. C'est aussi simple que ça.<br />
     </p>
   </SpeakerNotes>
 </Slide>
