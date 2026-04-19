@@ -1,14 +1,14 @@
 <script lang="ts">
-  import Slide from '$lib/Slide.svelte';
-  import RightArrow from './common/RightArrow.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import CryptoKey from './common/CryptoKey.svelte';
-  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-  import User from './common/User.svelte';
-  import PlainDocument from './common/PlainDocument.svelte';
-  import './common/signing.css';
+	import Slide from '$lib/Slide.svelte';
+	import RightArrow from './common/RightArrow.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import CryptoKey from './common/CryptoKey.svelte';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+	import User from './common/User.svelte';
+	import PlainDocument from './common/PlainDocument.svelte';
+	import './common/signing.css';
 
-  const documentSize = 256;
+	const documentSize = 256;
 </script>
 
 <Slide>
@@ -65,7 +65,16 @@
     Bob a authentifié Alice sans partager de secret&nbsp;!
   </p>
 
-  <SpeakerNotes>TODO</SpeakerNotes>
+  <SpeakerNotes>
+    Voici Alice et Bob (l'ami d'Alice pas l'éponge)!
+    Disons que Bob veut communiquer avec Alice, mais il veut être sûr que c'est bien elle.<br/>
+    Pour cela, Bob va envoyer un document à Alice.<br/>
+    Elle, va utiliser sa clé privée pour signer le document.<br/>
+    Puis, elle va envoyer le document signé à Bob, ainsi que sa clé publique (que Bob peut de toute façon récupérer par ailleurs puisqu'elle est justement publique!).<br/>
+    Bob va utiliser la clé publique d'Alice pour vérifier la signature du document.<br/>
+    Si la signature est valide, Bob peut être sûr que le document provient bien d'Alice.<br/>
+    Bob a donc réussi à authentifier Alice, sans qu'aucun partage de secret n'ait lieu.
+  </SpeakerNotes>
 </Slide>
 
 <style>

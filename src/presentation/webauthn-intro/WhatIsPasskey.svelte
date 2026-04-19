@@ -49,7 +49,19 @@
     >
     ) qui identifie un utilisateur auprès d'un <em>Relying Party</em>.
   </p>
-  <SpeakerNotes>TODO</SpeakerNotes>
+  <SpeakerNotes>
+    <p>
+      Mais au fait, on n'a toujours pas parlé des passkeys alors que c'est dans le titre
+      de la présentation !<br />
+      Alors, c'est quoi une passkey ? Déjà, rien que pour le nom, le W3C nous propose
+      6 variantes... dont 2 dépréciées. Autant dire qu'ils ont eu du mal à se mettre d'accord.<br />
+      Et si on regarde la définition officielle... Voilà. C'est en anglais, c'est long,
+      et non, on ne va pas la lire ensemble.<br />
+      Moi, je vous propose de simplifier : une passkey, c'est un credential WebAuthn,
+      géré par le navigateur et l'authenticator, qui identifie un utilisateur auprès
+      d'une Relying Party. C'est tout.
+    </p>
+  </SpeakerNotes>
 </Slide>
 
 <style>
