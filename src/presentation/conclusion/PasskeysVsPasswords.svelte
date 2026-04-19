@@ -1,10 +1,12 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>
-  <h2>Passkeys vs Mots de passe</h2>
+  <h3>Passkeys vs Mots de passe</h3>
+  <VerticalSpacer height="2em"/>
   <table>
     <thead>
       <tr>
@@ -14,34 +16,34 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="fragment">
-        <td>Phishing</td>
+      <tr>
+        <td class="label">Phishing</td>
         <td class="pro">Résistant par conception</td>
         <td class="con">Vulnérable</td>
       </tr>
-      <tr class="fragment">
-        <td>Secret partagé</td>
+      <tr>
+        <td class="label">Secret partagé</td>
         <td class="pro">Non — clé privée locale</td>
         <td class="con">Oui — stocké sur le serveur</td>
       </tr>
-      <tr class="fragment">
-        <td>Réutilisation</td>
+      <tr>
+        <td class="label">Réutilisation</td>
         <td class="pro">Impossible — unique par site</td>
         <td class="con">Fréquente en pratique</td>
       </tr>
-      <tr class="fragment">
-        <td>Portabilité</td>
+      <tr>
+        <td class="label">Portabilité</td>
         <td class="con">Liée à un écosystème</td>
         <td class="pro">Universelle</td>
       </tr>
-      <tr class="fragment">
-        <td>Récupération</td>
+      <tr>
+        <td class="label">Récupération</td>
         <td class="con">Complexe (perte d'appareils)</td>
         <td class="pro">Email / SMS / support</td>
       </tr>
     </tbody>
   </table>
-  <p class="fragment conclusion">
+  <p class="conclusion">
     <strong>Les passkeys ne remplacent pas les mots de passe — elles les complètent.</strong>
   </p>
   <SpeakerNotes>
@@ -58,16 +60,41 @@
 </Slide>
 
 <style>
+  table {
+    box-shadow: none;
+    text-align: center;
+  }
+
+  th {
+    background: transparent;
+    color: var(--r-heading-color);
+    border-bottom: 2px solid var(--dvx-orange);
+  }
+
+  td {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  tr:hover td {
+    background: transparent !important;
+  }
+
+  .label {
+    font-weight: 700;
+    color: var(--ocean-deep);
+  }
+
   .pro {
-    color: var(--sea-green, #007a6a);
+    color: var(--sea-green);
   }
 
   .con {
-    color: var(--danger-red, #c0392b);
+    color: var(--danger-red);
   }
 
   .conclusion {
-    margin-top: 0.8em;
-    font-size: 0.95em;
+    margin-top: 2em;
+    font-size: 1.2em;
   }
 </style>

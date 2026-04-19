@@ -107,15 +107,54 @@
 </section>
 
 <section>
-  <SectionTitleSlide title="2. Authentification avec une Passkey" />
+  <SectionTitleSlide title="2. Authentification avec une Passkey" >
+    <SpeakerNotes>
+      <p>Maintenant que l'utilisateur a enregistré sa passkey, voyons comment elle peut
+        être utilisée pour s'authentifier.
+      </p>
+    </SpeakerNotes>
+  </SectionTitleSlide>
 
   <AuthenticationFlowSlide />
-  <LiveCodingTransitionSlide project="krabsvault-py" />
-  <DemoTransitionSlide />
+  <LiveCodingTransitionSlide project="krabsvault-py">
+    <p>Points à montrer dans le code :</p>
+    <ul>
+      <li>generate_authentication_options() — seulement rp_id + user_verification (vs 7 params pour l'enregistrement)</li>
+      <li>Frontend : navigator.credentials.get() — même pattern 3 étapes que l'enregistrement</li>
+      <li>verify_authentication_response() — vérification signature avec la clé publique stockée</li>
+      <li>Signature count : détection de clonage d'authenticator</li>
+    </ul>
+    <p>
+      Passons au code de l'authentification. Vous allez voir que c'est beaucoup plus
+      simple que l'enregistrement.<br />
+      La génération des options n'a besoin que du rp_id et du niveau de vérification
+      utilisateur. Pas de user_id, pas de resident_key — tout ça a été fait à
+      l'enregistrement.<br />
+      Côté frontend, c'est exactement le même pattern en 3 étapes : on récupère les
+      options, on appelle l'API du navigateur — cette fois credentials.get() au lieu
+      de credentials.create() — et on renvoie le résultat au serveur.<br />
+      La vérification côté serveur est le point intéressant : on récupère la clé
+      publique stockée à l'enregistrement et on vérifie que la signature est valide.
+      On retrouve les mêmes vérifications que pour l'enregistrement : challenge,
+      origin, rp_id.<br />
+      Un petit détail en plus : le signature count. À chaque authentification,
+      l'authenticator incrémente un compteur. Si ce compteur recule ou stagne,
+      ça peut indiquer qu'un authenticator a été cloné. C'est une mesure de
+      sécurité supplémentaire.<br />
+    </p>
+  </LiveCodingTransitionSlide>
+  <DemoTransitionSlide notes="Maintenant que le code est en place, voyons le résultat sur l'application complète." />
 </section>
 
 <section>
-  <SectionTitleSlide title="Conclusion" />
+  <SectionTitleSlide title="Conclusion">
+    <SpeakerNotes>
+      <p>
+        On a vu le problème des mots de passe, comment les passkeys fonctionnent,
+        et on les a implémentées dans KrabsVault. Prenons un peu de recul.
+      </p>
+    </SpeakerNotes>
+  </SectionTitleSlide>
   <ImplementationRecap />
   <PasskeysVsPasswords />
 </section>

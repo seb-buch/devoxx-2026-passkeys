@@ -359,17 +359,14 @@
 }
 
 .reveal table th {
-  font-family: var(--r-heading-font);
   font-weight: 600;
   letter-spacing: 0.02em;
-  background: var(--ocean-deep);
-  color: #ffffff;
   padding: 0.5em 1em;
   border-bottom: 2px solid var(--dvx-orange);
 }
 
 .reveal table td {
-  padding: 0.4em 1em;
+  padding: 0.5em 1.2em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   color: var(--dvx-text);
   background: rgba(0, 0, 0, 0.02);
@@ -531,9 +528,10 @@
   background: rgba(185, 28, 28, 0.06);
   border: 2px solid var(--danger-red);
   border-radius: 10px;
-  padding: 0.6em 1em;
+  padding: 0.3em 0.6em;
   margin: 0.5em 0;
   color: var(--danger-red);
+  font-size: 0.9em;
 }
 
 /* Secure / passkey box */
@@ -541,7 +539,8 @@
   background: rgba(22, 101, 52, 0.06);
   border: 2px solid var(--sea-green);
   border-radius: 10px;
-  padding: 0.6em 1em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
   margin: 0.5em 0;
   color: var(--sea-green);
 }

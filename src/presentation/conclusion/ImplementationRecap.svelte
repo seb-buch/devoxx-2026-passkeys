@@ -1,38 +1,40 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>
-  <h2>Implémenter WebAuthn</h2>
+  <h3>Implémenter WebAuthn</h3>
+  <VerticalSpacer height="3em"/>
   <table>
     <thead>
       <tr>
         <th></th>
-        <th>Côté navigateur</th>
-        <th>Côté serveur</th>
+        <th>🌐 Navigateur</th>
+        <th>🖥️ Serveur</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="fragment">
-        <td><strong>API</strong></td>
-        <td>Web Authentication API<br /><code>navigator.credentials</code></td>
+      <tr>
+        <td class="label">API</td>
+        <td><code>navigator.credentials</code></td>
         <td>Aucune spécification</td>
       </tr>
-      <tr class="fragment">
-        <td><strong>Enregistrement</strong></td>
-        <td><code>navigator.credentials.create()</code></td>
-        <td>Générer les options + vérifier l'attestation</td>
+      <tr>
+        <td class="label">Enregistrement</td>
+        <td><code>credentials.create()</code></td>
+        <td>Options + vérifier l'attestation</td>
       </tr>
-      <tr class="fragment">
-        <td><strong>Authentification</strong></td>
-        <td><code>navigator.credentials.get()</code></td>
-        <td>Générer le challenge + vérifier l'assertion</td>
+      <tr>
+        <td class="label">Authentification</td>
+        <td><code>credentials.get()</code></td>
+        <td>Challenge + vérifier l'assertion</td>
       </tr>
-      <tr class="fragment">
-        <td><strong>Outillage</strong></td>
-        <td>Natif (navigateur)</td>
-        <td>Bibliothèque indispensable<br />(ex. SimpleWebAuthn, java-webauthn-server…)</td>
+      <tr>
+        <td class="label">Outillage</td>
+        <td>Natif — rien à installer</td>
+        <td>Bibliothèque indispensable</td>
       </tr>
     </tbody>
   </table>
@@ -47,3 +49,29 @@
     on l'a vu dans KrabsVault.
   </SpeakerNotes>
 </Slide>
+
+<style>
+  table {
+    box-shadow: none;
+  }
+
+  th {
+    background: transparent;
+    color: var(--r-heading-color);
+    border-bottom: 2px solid var(--dvx-orange);
+  }
+
+  td {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  tr:hover td {
+    background: transparent !important;
+  }
+
+  .label {
+    font-weight: 700;
+    color: var(--ocean-deep);
+  }
+</style>
