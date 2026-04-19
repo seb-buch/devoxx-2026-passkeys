@@ -1,5 +1,7 @@
 <script lang="ts">
   import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import type { Snippet } from 'svelte';
   import backgroundImage from '../assets/images/spongebob-time-card-background.jpeg';
   import krabsCoding from '../assets/images/Krabs-coding.png';
 
@@ -7,9 +9,10 @@
     project: string;
     path?: string;
     title?: string;
+    children?: Snippet;
   };
 
-  const { project, path, title = 'Live coding' }: Props = $props();
+  const { project, path, title = 'Live coding', children }: Props = $props();
 
   const url = $derived(
     `jetbrains://pycharm/navigate/reference?project=${encodeURIComponent(project)}` +
@@ -24,6 +27,9 @@
       <img src={krabsCoding} alt="Mr. Krabs code" />
     </a>
   </div>
+  {#if children}
+    <SpeakerNotes>{@render children()}</SpeakerNotes>
+  {/if}
 </Slide>
 
 <style>
