@@ -1,12 +1,12 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>
   <h3>Passkeys vs Mots de passe</h3>
-  <VerticalSpacer height="2em"/>
+  <VerticalSpacer height="2em" />
   <table>
     <thead>
       <tr>

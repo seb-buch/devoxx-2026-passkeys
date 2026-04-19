@@ -1,6 +1,6 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <Slide>
@@ -179,18 +179,18 @@
   <SpeakerNotes>
     <p>
       FIDO2, c'est la norme chapeau qui se décompose en deux parties.<br />
-      WebAuthn, c'est le standard W3C qui définit l'API JavaScript que votre application web
-      va utiliser. C'est la partie qui nous intéresse le plus en tant que développeurs.<br />
-      Et CTAP, c'est le protocole qui gère la communication entre le navigateur et
-      l'authenticator — que ce soit le lecteur d'empreinte de votre laptop, Face ID sur votre
-      téléphone, ou une clé de sécurité USB. Cette partie-là est transparente pour nous,
-      c'est le navigateur et l'OS qui s'en chargent.<br />
-      Aujourd'hui, on va se concentrer sur la partie WebAuthn, celle qui vous concerne
-      en tant que développeurs d'applications.<br/>
-      Au passage, vous voyez sur le diagramme les termes "Relying Party Client" et "RP Server" que l'on utilise souvent car ils sont définis dans la norme.
-      Pour que ce soit clair pour la suite, la Relying Party, ou partie de confiance en français, c'est tout simplement votre
-      application — celle à qui l'utilisateur cherche à prouver son identité.
-      Dans notre cas, c'est KrabsVault.<br />
+      WebAuthn, c'est le standard W3C qui définit l'API JavaScript que votre application web va utiliser.
+      C'est la partie qui nous intéresse le plus en tant que développeurs.<br />
+      Et CTAP, c'est le protocole qui gère la communication entre le navigateur et l'authenticator — que
+      ce soit le lecteur d'empreinte de votre laptop, Face ID sur votre téléphone, ou une clé de sécurité
+      USB. Cette partie-là est transparente pour nous, c'est le navigateur et l'OS qui s'en chargent.<br
+      />
+      Aujourd'hui, on va se concentrer sur la partie WebAuthn, celle qui vous concerne en tant que développeurs
+      d'applications.<br />
+      Au passage, vous voyez sur le diagramme les termes "Relying Party Client" et "RP Server" que l'on
+      utilise souvent car ils sont définis dans la norme. Pour que ce soit clair pour la suite, la Relying
+      Party, ou partie de confiance en français, c'est tout simplement votre application — celle à qui
+      l'utilisateur cherche à prouver son identité. Dans notre cas, c'est KrabsVault.<br />
     </p>
   </SpeakerNotes>
 </Slide>

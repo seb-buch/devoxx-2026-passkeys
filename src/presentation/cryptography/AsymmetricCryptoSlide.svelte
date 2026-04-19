@@ -1,10 +1,10 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import CryptoKey from './common/CryptoKey.svelte';
-	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import CryptoKey from './common/CryptoKey.svelte';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 
-	const keySize = '150px';
+  const keySize = '150px';
 </script>
 
 <Slide>
@@ -34,10 +34,13 @@
   </div>
   <SpeakerNotes>
     <p>
-      Pour s'authentifier sans mot de passe, une des piste est d'utiliser la cryptographie asymètrique qui repose sur une paire de clés:<br/>
-      une clé privée qui reste absolument secrète et qu'on ne partage sous aucun prétexte avec personne.<br/>
-      Et une clé publique qui, elle, peut, et même, doit être partagée publiquement.<br/>
-      On ne va pas rentrer dans des détails cryptographiques ici, car ce n'est pas le sujet ici (et je n'ai de toute façon pas les compétences pour le faire).<br/>
+      Pour s'authentifier sans mot de passe, une des piste est d'utiliser la cryptographie
+      asymètrique qui repose sur une paire de clés:<br />
+      une clé privée qui reste absolument secrète et qu'on ne partage sous aucun prétexte avec personne.<br
+      />
+      Et une clé publique qui, elle, peut, et même, doit être partagée publiquement.<br />
+      On ne va pas rentrer dans des détails cryptographiques ici, car ce n'est pas le sujet ici (et je
+      n'ai de toute façon pas les compétences pour le faire).<br />
       En revanche, je vous propose de voir comment ça fonctionne en pratique.
     </p>
   </SpeakerNotes>
