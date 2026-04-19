@@ -1,6 +1,6 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <Slide backgroundImage="/devoxx/bg-image7.jpg" backgroundSize="cover">
@@ -13,13 +13,15 @@
     </div>
   </div>
   <SpeakerNotes>
-    Bonjour à toutes et tous ! Merci pour l'introduction. Effectivement, on va passer la prochaine
-    demi-heure à parler d'une méthode d'authentification que vous avez sans doute déjà vu apparaître
-    sur certains des sites que vous fréquentez. Il s'agit de l'authentification WebAuthn ou, pour
-    simplifier, des passkeys. On va voir ensemble quelles sont les différences avec
-    l'authentification par mot de passe, les détails techniques, mais aussi comment on peut mettre
-    en place ce type d'authentification avec une application qui nous servira d'exemple tout au long
-    de cette session.
+    <p>
+      Bonjour à toutes et tous!<br />
+      Je vous propose de passer la prochaine demi-heure à parler d'une méthode d'authentification que
+      vous avez sans doute déjà vu apparaître sur certains des sites que vous fréquentez.<br />
+      Il s'agit de l'authentification WebAuthn ou, pour simplifier, des passkeys.<br />
+      On va voir ensemble quelles sont les différences avec l'authentification par mot de passe, les détails
+      techniques, mais aussi comment on peut mettre en place ce type d'authentification avec une application
+      qui nous servira d'exemple tout au long de cette session.
+    </p>
   </SpeakerNotes>
 </Slide>
 
@@ -31,14 +33,12 @@
     justify-content: flex-end;
     background: linear-gradient(
       to top,
-      rgba(48, 73, 54 ,0.9) 0%,
-      rgba(48, 73, 54, 0.70) 50%,
-      rgba(48, 73, 54, 0.30) 100%
+      rgba(48, 73, 54, 0.9) 0%,
+      rgba(48, 73, 54, 0.7) 50%,
+      rgba(48, 73, 54, 0.3) 100%
     );
     backdrop-filter: blur(5px);
   }
-
-
 
   .title-content {
     padding: 0 2em 2.5em;

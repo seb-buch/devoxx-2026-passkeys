@@ -1,7 +1,7 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-	import qrCodeRepo from '../assets/images/QRcode_github.svg';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import qrCodeRepo from '../assets/images/QRcode_github.svg';
 </script>
 
 <Slide backgroundImage="/devoxx/bg-image11.jpg" backgroundSize="cover">
@@ -35,10 +35,10 @@
     height: 1080px;
     justify-content: center;
     background: linear-gradient(
-        to top,
-        rgba(48, 73, 54 ,0.9) 0%,
-        rgba(48, 73, 54, 0.70) 50%,
-        rgba(48, 73, 54, 0.30) 100%
+      to top,
+      rgba(48, 73, 54, 0.9) 0%,
+      rgba(48, 73, 54, 0.7) 50%,
+      rgba(48, 73, 54, 0.3) 100%
     );
     backdrop-filter: blur(5px);
   }
@@ -73,9 +73,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px dashed rgba(31, 29, 29 ,0.5);
+    border: 3px dashed rgba(31, 29, 29, 0.5);
     border-radius: 8px;
-    color: rgba(31, 29, 29 ,0.5);
+    color: rgba(31, 29, 29, 0.5);
     font-size: 0.9em;
   }
 </style>

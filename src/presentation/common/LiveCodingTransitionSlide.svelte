@@ -13,7 +13,7 @@
 
   const url = $derived(
     `jetbrains://pycharm/navigate/reference?project=${encodeURIComponent(project)}` +
-    (path ? `&path=${encodeURIComponent(path)}` : '')
+      (path ? `&path=${encodeURIComponent(path)}` : '')
   );
 </script>
 
@@ -43,14 +43,14 @@
     color: white;
     text-transform: uppercase;
     text-shadow:
-      3px 3px 0 #1B1464,
-      -2px -2px 0 #1B1464,
-      2px -2px 0 #1B1464,
-      -2px 2px 0 #1B1464,
-      0 3px 0 #1B1464,
-      3px 0 0 #1B1464,
-      0 -2px 0 #1B1464,
-      -2px 0 0 #1B1464;
+      3px 3px 0 #1b1464,
+      -2px -2px 0 #1b1464,
+      2px -2px 0 #1b1464,
+      -2px 2px 0 #1b1464,
+      0 3px 0 #1b1464,
+      3px 0 0 #1b1464,
+      0 -2px 0 #1b1464,
+      -2px 0 0 #1b1464;
     letter-spacing: 0.1em;
     line-height: 2;
   }

@@ -42,8 +42,8 @@
     l'authentification. C'est standardisé par le W3C, donc natif dans tous les navigateurs modernes.
     Côté serveur en revanche, WebAuthn ne définit rien. C'est à vous de gérer la génération des
     options, la vérification des attestations et des assertions. Et c'est là que les bibliothèques
-    comme SimpleWebAuthn ou java-webauthn-server sont précieuses — elles gèrent toute la
-    complexité cryptographique pour vous. En quelques appels de fonction, vous avez un flow
-    fonctionnel, comme on l'a vu dans KrabsVault.
+    comme SimpleWebAuthn ou java-webauthn-server sont précieuses — elles gèrent toute la complexité
+    cryptographique pour vous. En quelques appels de fonction, vous avez un flow fonctionnel, comme
+    on l'a vu dans KrabsVault.
   </SpeakerNotes>
 </Slide>

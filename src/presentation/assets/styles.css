@@ -25,6 +25,7 @@
 /* =====================================================
    POLICES
    ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap');
 
 @font-face {
   font-family: 'Pirulen';
@@ -40,8 +41,6 @@
   font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap');
-
 /* =====================================================
    VARIABLES CSS
    ===================================================== */
@@ -56,21 +55,21 @@
   --dvx-alt-green: #9bc1b8;
 
   /* --- Backgrounds --- */
-  --dvx-bg-main: #E8E8E8;
-  --dvx-bg-dark: #E8E8E8;
+  --dvx-bg-main: #e8e8e8;
+  --dvx-bg-dark: #e8e8e8;
   --dvx-bg-card: rgba(0, 0, 0, 0.04);
   --dvx-bg-elevated: rgba(0, 0, 0, 0.06);
 
   /* --- Text --- */
-  --dvx-text: #2B2B2B;
+  --dvx-text: #2b2b2b;
   --dvx-text-muted: rgba(43, 43, 43, 0.6);
 
   /* --- SpongeBob narrative (semantic colors) --- */
   --ocean-deep: #003459;
-  --sponge-yellow: #8B6508;
+  --sponge-yellow: #8b6508;
   --sea-green: #166534;
-  --danger-red: #B91C1C;
-  --sand-brown: #8B6914;
+  --danger-red: #b91c1c;
+  --sand-brown: #8b6914;
 
   /* --- reveal.js core variables --- */
   --r-background-color: var(--dvx-bg-main);
@@ -110,7 +109,6 @@
   background: var(--dvx-bg-main);
   background-color: var(--dvx-bg-main);
 }
-
 
 /* =====================================================
    SLIDES
@@ -294,7 +292,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 6px;
   padding: 0.05em 0.3em;
-  color: #B91C1C;
+  color: #b91c1c;
   font-size: 0.9em;
 }
 
@@ -476,8 +474,8 @@
 }
 
 .reveal .slides section.title-slide a {
-  color: #93C5FD;
-  border-bottom-color: #93C5FD;
+  color: #93c5fd;
+  border-bottom-color: #93c5fd;
 }
 
 /* =====================================================

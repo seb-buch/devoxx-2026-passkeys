@@ -1,12 +1,16 @@
 <script lang="ts">
-	import Slide from '$lib/Slide.svelte';
-	import backgroundImage from '../assets/images/spongebob-time-card-background.jpeg';
+  import Slide from '$lib/Slide.svelte';
+  import backgroundImage from '../assets/images/spongebob-time-card-background.jpeg';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <Slide {backgroundImage}>
   <div class="section-title">
-      <h3>Pendant ce temps à<br/>Bikini Bottom...</h3>
+    <h3>Bienvenue à<br />Bikini Bottom...</h3>
   </div>
+  <SpeakerNotes>
+    <p>Et pour commencer, on va partir à Bikini Bottom!</p>
+  </SpeakerNotes>
 </Slide>
 
 <style>
@@ -26,14 +30,14 @@
     color: white;
     text-transform: uppercase;
     text-shadow:
-      3px 3px 0 #1B1464,
-      -2px -2px 0 #1B1464,
-      2px -2px 0 #1B1464,
-      -2px 2px 0 #1B1464,
-      0 3px 0 #1B1464,
-      3px 0 0 #1B1464,
-      0 -2px 0 #1B1464,
-      -2px 0 0 #1B1464;
+      3px 3px 0 #1b1464,
+      -2px -2px 0 #1b1464,
+      2px -2px 0 #1b1464,
+      -2px 2px 0 #1b1464,
+      0 3px 0 #1b1464,
+      3px 0 0 #1b1464,
+      0 -2px 0 #1b1464,
+      -2px 0 0 #1b1464;
     letter-spacing: 0.1em;
     line-height: 2;
   }

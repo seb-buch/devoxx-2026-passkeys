@@ -41,27 +41,29 @@
       </tr>
     </tbody>
   </table>
-  <p class="fragment conclusion"><strong>Les passkeys ne remplacent pas les mots de passe — elles les complètent.</strong></p>
+  <p class="fragment conclusion">
+    <strong>Les passkeys ne remplacent pas les mots de passe — elles les complètent.</strong>
+  </p>
   <SpeakerNotes>
-    Ce tableau résume bien la situation. Les passkeys règlent les vrais problèmes de sécurité : pas de
-    phishing possible puisque le navigateur vérifie l'origin, pas de secret partagé à voler côté
-    serveur, et pas de réutilisation entre sites. Mais les mots de passe gardent des avantages concrets :
-    ils fonctionnent partout, la récupération de compte est simple, et surtout, pour enregistrer une
-    passkey, il faut d'abord être connecté — souvent avec un mot de passe. C'est le problème de l'œuf
-    et la poule. Donc ma conclusion est pragmatique : proposez les passkeys comme méthode
-    d'authentification principale pour la sécurité et le confort, mais gardez le mot de passe comme
-    méthode de repli. C'est exactement ce que fait KrabsVault, et c'est ce que je vous encourage à
-    faire dans vos applications.
+    Ce tableau résume bien la situation. Les passkeys règlent les vrais problèmes de sécurité : pas
+    de phishing possible puisque le navigateur vérifie l'origin, pas de secret partagé à voler côté
+    serveur, et pas de réutilisation entre sites. Mais les mots de passe gardent des avantages
+    concrets : ils fonctionnent partout, la récupération de compte est simple, et surtout, pour
+    enregistrer une passkey, il faut d'abord être connecté — souvent avec un mot de passe. C'est le
+    problème de l'œuf et la poule. Donc ma conclusion est pragmatique : proposez les passkeys comme
+    méthode d'authentification principale pour la sécurité et le confort, mais gardez le mot de
+    passe comme méthode de repli. C'est exactement ce que fait KrabsVault, et c'est ce que je vous
+    encourage à faire dans vos applications.
   </SpeakerNotes>
 </Slide>
 
 <style>
   .pro {
-    color: var(--sea-green, #007A6A);
+    color: var(--sea-green, #007a6a);
   }
 
   .con {
-    color: var(--danger-red, #C0392B);
+    color: var(--danger-red, #c0392b);
   }
 
   .conclusion {

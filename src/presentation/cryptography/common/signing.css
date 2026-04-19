@@ -21,7 +21,6 @@
   top: -420px;
   left: 510px;
 
-
   &.visible {
     top: 0;
     visibility: visible;
@@ -29,7 +28,8 @@
   }
 }
 
-.alice-private-key.fragment , .bob-verification-key.fragment{
+.alice-private-key.fragment,
+.bob-verification-key.fragment {
   position: relative;
   left: -470px;
   top: 170px;

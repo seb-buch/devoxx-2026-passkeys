@@ -1,8 +1,8 @@
 <script>
-	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
-	import robot from '../assets/images/bot-sick.png';
+  import Slide from '$lib/Slide.svelte';
+  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+  import robot from '../assets/images/bot-sick.png';
 </script>
 
 <Slide>
@@ -13,15 +13,17 @@
     <li class="fragment">Secret partagé &equals; surface d'attaque double</li>
     <li class="fragment">Vulnérabilité au phishing</li>
   </ul>
-  <img src={robot} alt="Robot malade" class="robot"/>
+  <img src={robot} alt="Robot malade" class="robot" />
   <SpeakerNotes>
-    Les mots de passe, on connaît les problèmes. Premièrement, les utilisateurs choisissent des mots
-    de passe faibles ou les réutilisent partout. Deuxièmement, côté serveur, les bases peuvent
-    fuiter — et même avec du hashing, c'est un risque. Troisièmement — et c'est celui qui nous
-    intéresse le plus aujourd'hui — le phishing. Le mot de passe est un secret que l'utilisateur
-    connaît, donc on peut le lui soutirer en le trompant. Le problème fondamental, c'est que le mot
-    de passe est un secret partagé : il existe des deux côtés, et il peut être intercepté pendant le
-    transit.
+    Les mots de passe, c'est très pratique et on en utilise partout, mais ce n'est pas parfait!<br
+    />
+    Tout d'abord, beaucoup de gens utilise un mot de passe très simple à cracker... Quand il n'utilise
+    pas le même mot de passe partout!<br />
+    Ensuite, un mot de passe cela reste un secret que l'on partage typiquement avec un serveur en passant
+    par internet. Et, partager un secret c'est toujours s'exposer à ce qu'il soit intercepter par quelqu'un
+    de malveillant.<br />
+    Enfin, un mot de passe ne propose aucune sécurité permettant d'authentifier le service avec qui on
+    le partage, ce qui ouvre la porte au phishing.
   </SpeakerNotes>
 </Slide>
 
