@@ -1,7 +1,7 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import VerticalSpacer from '$lib/VerticalSpacer.svelte';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import VerticalSpacer from '$lib/VerticalSpacer.svelte';
 </script>
 
 <Slide>
@@ -43,7 +43,7 @@
       </tr>
     </tbody>
   </table>
-  <p class="conclusion">
+  <p class="conclusion fragment">
     <strong>Les passkeys ne remplacent pas les mots de passe — elles les complètent.</strong>
   </p>
   <SpeakerNotes>
