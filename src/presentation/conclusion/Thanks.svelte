@@ -1,7 +1,8 @@
 <script>
-  import Slide from '$lib/Slide.svelte';
-  import SpeakerNotes from '$lib/SpeakerNotes.svelte';
-  import qrCodeRepo from '../assets/images/QRcode_github.svg';
+	import Slide from '$lib/Slide.svelte';
+	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
+	import qrCodeRepo from '../assets/images/QRcode_github.svg';
+	import qrCodeFeedback from '../assets/images/qr-code-devoxx.svg';
 </script>
 
 <Slide backgroundImage="/devoxx/bg-image11.jpg" backgroundSize="cover">
@@ -16,7 +17,7 @@
         <h3>Questions ?</h3>
       </div>
       <figure>
-        <div class="placeholder">QR code à venir</div>
+        <img src={qrCodeFeedback} alt="QR code Feedback" />
         <figcaption>Feedback</figcaption>
       </figure>
     </div>
@@ -67,15 +68,4 @@
     }
   }
 
-  .placeholder {
-    height: 20rem;
-    width: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px dashed rgba(31, 29, 29, 0.5);
-    border-radius: 8px;
-    color: rgba(31, 29, 29, 0.5);
-    font-size: 0.9em;
-  }
 </style>
