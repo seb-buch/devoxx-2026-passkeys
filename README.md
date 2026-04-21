@@ -11,6 +11,10 @@ et présentée au [Devoxx France 2026](https://devoxx.fr/).
 La présentation est disponible en
 ligne [ici](https://seb-buch.github.io/devoxx-2026-passkeys).
 
+## Je veux voir le code de l'application présentée en démo
+
+Le code source est disponible [ici](https://github.com/seb-buch/krabsvault).
+
 ## Je veux construire et servir la présentation en local.
 
 Pour servir la présentation en mode développement, il faut:
