@@ -1,11 +1,10 @@
 <script>
-  import DemoTransitionSlide from './common/DemoTransitionSlide.svelte';
-  import BikiniBottomSlide from './passwords/BikiniBottomSlide.svelte';
-  import PasswordProblemsSlide from './passwords/PasswordProblemsSlide.svelte';
-  import PhishingTransitionSlide from './passwords/PhishingTransitionSlide.svelte';
-  import BikiniBottomTransitionSlide from './common/BikiniBottomTransitionSlide.svelte';
-  import LiveCodingTransitionSlide from './common/LiveCodingTransitionSlide.svelte';
-  import KrabsvaultTechStackSlide from './KrabsvaultTechStackSlide.svelte';
+	import DemoTransitionSlide from './common/DemoTransitionSlide.svelte';
+	import BikiniBottomSlide from './passwords/BikiniBottomSlide.svelte';
+	import PasswordProblemsSlide from './passwords/PasswordProblemsSlide.svelte';
+	import BikiniBottomTransitionSlide from './common/BikiniBottomTransitionSlide.svelte';
+	import LiveCodingTransitionSlide from './common/LiveCodingTransitionSlide.svelte';
+	import KrabsvaultTechStackSlide from './KrabsvaultTechStackSlide.svelte';
 </script>
 
 <section>
@@ -38,6 +37,5 @@
       Sauf que, le lendemain de la mise en production, Bob reçoit le message suivant...
     </p>
   </LiveCodingTransitionSlide>
-  <PhishingTransitionSlide />
   <PasswordProblemsSlide />
 </section>
